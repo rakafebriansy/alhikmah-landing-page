@@ -592,6 +592,10 @@ video {
   position: relative;
 }
 
+.-left-20 {
+  left: -5rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -641,6 +645,10 @@ video {
   height: 1.25rem;
 }
 
+.min-h-60 {
+  min-height: 15rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -649,12 +657,12 @@ video {
   width: 2.25rem;
 }
 
-.w-full {
-  width: 100%;
+.w-\[30\%\] {
+  width: 30%;
 }
 
-.max-w-\[250px\] {
-  max-width: 250px;
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[220px\] {
@@ -689,18 +697,13 @@ video {
   border-radius: 0.5rem;
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#344D2F\] {
   --tw-bg-opacity: 1;
   background-color: rgb(52 77 47 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .p-1 {
@@ -733,10 +736,6 @@ video {
 
 .pl-8 {
   padding-left: 2rem;
-}
-
-.pt-36 {
-  padding-top: 9rem;
 }
 
 .text-base {
@@ -785,8 +784,18 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* :root{
+    --very_small: 200;
+} */
+
 body {
   font-family: 'Poppins', serif;
+}
+
+@media (min-width: 390px) and (max-width: 640px) {
+  #masjid {
+    top: 6rem;
+  }
 }
 
 .navbar-fixed {
@@ -833,6 +842,10 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+#hero>div {
+  background-image:url(../assets/img/bg.svg);
+}
+
 @keyframes blink{
   0% {
     opacity: 100%;
@@ -858,9 +871,25 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:top-40 {
+    top: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:top-48 {
+    top: 12rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
+  }
+
+  .lg\:top-64 {
+    top: 16rem;
   }
 
   .lg\:mt-0 {
@@ -891,15 +920,16 @@ body {
     background-color: transparent;
   }
 
-  .lg\:bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-
   .lg\:shadow-none {
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:top-\[21rem\] {
+    top: 21rem;
   }
 }
 
