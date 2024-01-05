@@ -17,9 +17,9 @@ body {
     font-family: 'Poppins', serif;
 }
 
-@media (min-width: 390px) and (max-width: 640px) {
+@media (min-width: 360px) and (max-width: 640px) {
     #masjid {
-        @apply top-[6rem];
+        @apply top-[5.6rem];
     }
 }
 
