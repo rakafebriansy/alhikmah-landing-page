@@ -1,105 +1,104 @@
-const html = document.querySelector('html');
-const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector('#nav-menu');
-const backToTop = document.querySelector('#back-to-top');
-const darkToggle = document.querySelector('#dark-toggle');
-const bacaSelengkapnya = [];
-for (let i = 0; i<3; i++){
-    bacaSelengkapnya[i] = document.querySelector(`#baca-selengkapnya${i}`);
-}
-
 //NAVBAR SCROLL
 window.onscroll = function(){
-    const header = document.querySelector('header');
-    const fixedNav = header.offsetTop;
-    
-    if(window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed');
-        backToTop.classList.remove('hidden');
-        backToTop.classList.add('flex');
+    const HEADER = $('HEADER');
+    const FIXED_NAV = HEADER[0].offsetTop;
+    if(window.pageYOffset > FIXED_NAV) {
+        HEADER.addClass('navbar-fixed');
     } else{
-        header.classList.remove('navbar-fixed');
-        backToTop.classList.remove('flex');
-        backToTop.classList.add('hidden');
+        HEADER.removeClass('navbar-fixed');
     }
 };
 
 //HAMBURGER MENU
-hamburger.addEventListener('click',function(){
-    hamburger.classList.toggle('hamburger-active');
-    navMenu.classList.toggle('hidden');
+const HAMBURGER = $('#hamburger');
+const NAV_MENU = $('#nav-menu');
+HAMBURGER.on('click', () => {
+    HAMBURGER.toggleClass('hamburger-active');
+    NAV_MENU.toggleClass('hidden');
 });
-
-window.addEventListener('click',function(e){
-    if(e.target != hamburger && e.target != navMenu){
-        hamburger.classList.remove('hamburger-active');
-        navMenu.classList.add('hidden');
+$(window).on('click', (e) => {
+    if(e.target != HAMBURGER[0] && e.target != NAV_MENU[0]){
+        HAMBURGER.removeClass('hamburger-active');
+        NAV_MENU.addClass('hidden');
     }
 })
 
-//DARK MODE BUTTON
-darkToggle.addEventListener('click',function(){
-    if (darkToggle.checked) {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
-    } else {
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
-    }
-})
-
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    darkToggle.checked=true;
-} else {
-      darkToggle.checked=false;
-}
-
-
-//TYPING ANIMATION
-function sleep(ms){
-    return new Promise((resolve) => setTimeout(resolve,ms));
-}
-const phrases = ['Mahasiswa', 'Gamer', 'Developer'];
-const typewriter = document.querySelector('#typewriter')
-let sleepTime = 100;
-let curPhraseIndex = 0;
-const writeLoop = async () => {
-    while(true){
-        let curWord = phrases[curPhraseIndex];
-        console.log('ok')
-
-        for (let i=0; i < curWord.length; i++){
-            typewriter.innerText = curWord.substring(0, i+1);
-            await sleep(sleepTime);
-        }
-        
-        await sleep(sleepTime*10);
-        
-        for (let i=curWord.length; i>0; i--){
-            typewriter.innerText = curWord.substring(0, i-1);
-            await sleep(sleepTime);
-        }
-
-        await sleep(sleepTime*5);
-
-        if (curPhraseIndex === phrases.length - 1){
-            curPhraseIndex = 0;
-        } else {
-            curPhraseIndex++;
-        }
-    }
+//CAROUSEL
+const CAROUSEL = $('.carousel');
+const WRAPPER = $('.wrapper');
+const ARROW_BTNS = $('.wrapper .arrow');
+const FIRST_CARD_WIDTH = $('.carousel .card')[0].offsetWidth;
+const CAROUSEL_CHILDREN = [...CAROUSEL.children()];
+let is_dragging = false, startX, startScrollLeft, timeoutId;
+let card_per_view = Math.round(CAROUSEL[0].offsetWidth/FIRST_CARD_WIDTH);
+$.each(CAROUSEL_CHILDREN.slice(-card_per_view).reverse(), (k,v) => {
+    CAROUSEL.prepend($(v).prop('outerHTML'));
+});
+$.each(CAROUSEL_CHILDREN.slice(0, card_per_view), (k,v) => {
+    CAROUSEL.append($(v).prop('outerHTML'));
+}); 
+$.each(ARROW_BTNS, (k,v) => {
+    $(v).on('click',()=>{
+        const FIRST_CARD_WIDTH = $('.carousel .card')[0].offsetWidth;
+        CAROUSEL.scrollLeft(CAROUSEL[0].scrollLeft += v.id === 'kiri'? -FIRST_CARD_WIDTH : FIRST_CARD_WIDTH);
+    });
+});
+const dragStart = (e) => {
+    is_dragging = true;
+    CAROUSEL.addClass('dragging');
+    startX = e.pageX;
+    startScrollLeft = CAROUSEL.scrollLeft();
 };
-writeLoop();
-
-//TRUNCATE PROJECT DESCRIPTION
-for (let i = 0; i < bacaSelengkapnya.length; i++){
-    let obj = bacaSelengkapnya[i];
-    obj.addEventListener('click',function(){
-        obj.parentNode.classList.toggle('project-desc');
-    if (obj.innerText == 'Baca Selengkapnya') {
-        obj.innerText = 'Lebih Sedikit'
-    } else {
-        obj.innerText = 'Baca Selengkapnya'
-    }
-    })
+const dragging = (e) => {
+    if(!is_dragging) return;
+    CAROUSEL.scrollLeft(startScrollLeft - (e.pageX - startX));
 }
+const dragStop = () => {
+    is_dragging = false;
+    CAROUSEL.removeClass('dragging');
+}
+const autoPlay = () => {
+    if(window.innerWidth < 768) return;
+    timeoutId = setTimeout(() => CAROUSEL[0].scrollLeft += FIRST_CARD_WIDTH, 2000);
+}
+const infiniteScroll = () => {
+    if(CAROUSEL.scrollLeft() === 0){
+        CAROUSEL.addClass('no-transition');
+        CAROUSEL.scrollLeft(CAROUSEL[0].scrollWidth - (2*CAROUSEL[0].offsetWidth));
+        CAROUSEL.removeClass('no-transition');
+    } else if (Math.ceil(CAROUSEL.scrollLeft()) === CAROUSEL[0].scrollWidth - CAROUSEL[0].offsetWidth){
+        CAROUSEL.addClass('no-transition');
+        CAROUSEL.scrollLeft(CAROUSEL[0].offsetWidth);
+        CAROUSEL.removeClass('no-transition');
+    }
+    clearTimeout(timeoutId);
+    if(!WRAPPER[0].matches(':hover')) autoPlay();
+}
+autoPlay();
+CAROUSEL.on('mousedown',dragStart);
+CAROUSEL.on('mousemove',dragging);
+$(document).on('mouseup',dragStop);
+CAROUSEL.on('scroll',infiniteScroll);
+WRAPPER.on('mouseenter',() => clearTimeout(timeoutId));
+WRAPPER.on('mouseleave',() => autoPlay());
+
+//PARALLAX EFFECT
+const PEMANDANGAN = $('#pemandangan');
+const MASJID = $('#masjid');
+// const AWAN_1 = $('#awan-1');
+// const AWAN_2 = $('#awan-2');
+// const AWAN_3 = $('#awan-3');
+// const AWAN_4 = $('#awan-4');
+// const AWAN_1_START = AWAN_1[0].getBoundingClientRect().left;
+// const AWAN_2_START = AWAN_2[0].getBoundingClientRect().left;
+// const AWAN_3_START = AWAN_3[0].getBoundingClientRect().left;
+// const AWAN_4_START = AWAN_4[0].getBoundingClientRect().left;
+$(window).on('scroll', () => {
+	let value = window.scrollY;
+	// AWAN_1[0].style.left = (AWAN_1_START + (value * 0.9)) + 'px';
+	// AWAN_2[0].style.left = (AWAN_2_START + (value * 0.9)) + 'px';
+	// AWAN_3[0].style.left = (AWAN_3_START + (value * 0.9)) + 'px';
+	// AWAN_4[0].style.left = (AWAN_4_START + (value * 0.9)) + 'px';
+	PEMANDANGAN[0].style.top = (value * 0.4) + 'px';
+	MASJID[0].style.top = (value * 0.4) + 'px';
+});

@@ -23,16 +23,18 @@ body {
 }
 
 .hamburger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-[#DDF8D6] dark:bg-[#344D2F];
+    @apply w-[30px] h-[2px] my-2 block bg-[#000000] dark:bg-[#344D2F];
 }
 
 .hamburger-active > span:nth-child(1){
     @apply -rotate-45;
 }
 .hamburger-active > span:nth-child(2){
-    @apply rotate-45;
+    @apply scale-0;
 }
-
+.hamburger-active > span:nth-child(3){
+    @apply rotate-45 ;
+}
 #hero>div {
     background-image:url(../assets/img/bg.svg);
 }
@@ -53,4 +55,47 @@ body {
     to {
         transform: translateX(-100%);
     }
+}
+@keyframes arrowHover{
+    from {
+        @apply bg-white
+    }
+    to {
+        @apply bg-dark-secondary
+    }
+}
+
+
+.carousel :where(.card, .image) {
+    @apply flex items-center justify-center;
+}
+
+.wrapper .arrow {
+    @apply cursor-pointer absolute top-1/2;
+    transform: translateY(-50%);
+}
+.wrapper .arrow:hover {
+    @apply bg-dark-secondary;
+    animation: arrowHover 0.2s;
+}
+
+.wrapper .carousel {
+    @apply grid grid-flow-col justify-start flex-col overflow-hidden scroll-smooth auto-cols-[calc(100%)] sm:auto-cols-[calc(100%/2)] lg:auto-cols-[calc(100%/3)];
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+    @apply hidden
+}
+.carousel.dragging .card {
+    @apply cursor-grab select-none
+}
+.carousel.dragging {
+    @apply scroll-auto
+}
+.carousel.no-transition{
+    @apply scroll-auto
+}
+.carousel .card {
+    @apply list-none cursor-pointer /*snap-start*/
 }
