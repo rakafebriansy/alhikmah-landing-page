@@ -58,17 +58,17 @@ $.each(ARROW_ARTICLE, (k,v) => {
 
 const dragStart = (e) => {
     is_dragging = true;
-    CAROUSEL.addClass('dragging');
+    ARTICLE.addClass('dragging');
     startX = e.pageX;
-    startScrollLeft = CAROUSEL.scrollLeft();
+    startScrollLeft = ARTICLE.scrollLeft();
 };
 const dragging = (e) => {
     if(!is_dragging) return;
-    CAROUSEL.scrollLeft(startScrollLeft - (e.pageX - startX));
+    ARTICLE.scrollLeft(startScrollLeft - (e.pageX - startX));
 }
 const dragStop = () => {
     is_dragging = false;
-    CAROUSEL.removeClass('dragging');
+    ARTICLE.removeClass('dragging');
 }
 const autoPlay = () => {
     if(window.innerWidth < 768) return;
@@ -88,12 +88,12 @@ const infiniteScroll = () => {
     if(!WRAPPER[0].matches(':hover')) autoPlay();
 }
 autoPlay();
-CAROUSEL.on('mousedown',dragStart);
-CAROUSEL.on('mousemove',dragging);
-$(document).on('mouseup',dragStop);
-CAROUSEL.on('scroll',infiniteScroll);
 WRAPPER.on('mouseenter',() => clearTimeout(timeoutId));
 WRAPPER.on('mouseleave',() => autoPlay());
+CAROUSEL.on('scroll',infiniteScroll);
+ARTICLE.on('mousedown',dragStart);
+ARTICLE.on('mousemove',dragging);
+$(document).on('mouseup',dragStop);
 
 //PARALLAX EFFECT
 const PEMANDANGAN = $('#pemandangan');
@@ -117,11 +117,19 @@ $(window).on('scroll', () => {
 });
 
 //CARDS HIGHLIGHTS
-$('.card').on('mouseenter',(e)=>{
-    $(e.target).find('.highlight').fadeIn('fast');
+$('.card .no-highlight').on('mouseenter',(e)=>{
+    console.log($(e.target))
+    $(e.target).removeClass('no-highlight');
+    $(e.target).addClass('highlight');
+    $(e.target).find('.no-highlight-text').addClass('highlight-text');
+    $(e.target).find('.no-highlight-text').removeClass('no-highlight-text');
 });
-$('.highlight').on('mouseleave',(e)=>{
-    $(e.target).fadeOut('fast');
+$('.card .no-highlight').on('mouseleave',(e)=>{
+    console.log('memek')
+    $(e.target).removeClass('highlight');
+    $(e.target).addClass('no-highlight');
+    $(e.target).find('.highlight-text').addClass('no-highlight-text');
+    $(e.target).find('.highlight-text').removeClass('highlight-text');
 });
 
 //ARROWS HIGHLIGHTS

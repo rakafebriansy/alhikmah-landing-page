@@ -67,7 +67,7 @@
         </div>
     </header>
     <section id="hero" class="dark:bg-emerald-700">
-        <div class="relative">
+        <div class="relative overflow-hidden">
             <img src="dist/assets/img/bg.svg" alt="">
             <img src="dist/assets/img/pemandangan-2.svg" id="pemandangan" class="top-0 absolute z-[1]">
             <img src="dist/assets/img/masjid-2.svg" id="masjid" class="absolute top-0 z-[2]">
@@ -115,24 +115,36 @@
         <div class="flex justify-center">
             <div
                 class="w-[70%] grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 mt-5 gap-y-7 sm:gap-y-12 md:gap-y-16 lg:gap-y-28 xl:gap-y-32">
-                <div class="w-[50%] justify-self-center">
-                    <img src="dist/assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                <div class="w-[85%] grid grid-flow-row">
+                    <div class="flex justify-center">
+                        <img src="dist/assets/img/frame.png" alt="frame" class="w-[70%]">
+                    </div>
+                    <p
+                        class="text-white block text-[0.6rem] sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Belajar Mengaji</p>
                 </div>
-                <div class="w-[50%] justify-self-center">
-                    <img src="dist/assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                <div class="w-[85%] grid grid-flow-row">
+                    <div class="flex justify-center">
+                        <img src="dist/assets/img/frame.png" alt="frame" class="w-[70%]">
+                    </div>
+                    <p
+                        class="text-white block text-[0.6rem] sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Bedah Hadits</p>
                 </div>
-                <div class="w-[50%] justify-self-center">
-                    <img src="dist/assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                <div class="w-[85%] grid grid-flow-row">
+                    <div class="flex justify-center">
+                        <img src="dist/assets/img/frame.png" alt="frame" class="w-[70%]">
+                    </div>
+                    <p
+                        class="text-white block text-[0.6rem] sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Kajian Rutin</p>
                 </div>
-                <div class="w-[50%] justify-self-center">
-                    <img src="dist/assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                <div class="w-[85%] grid grid-flow-row">
+                    <div class="flex justify-center">
+                        <img src="dist/assets/img/frame.png" alt="frame" class="w-[70%]">
+                    </div>
+                    <p
+                        class="text-white block text-[0.6rem] sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Tilawah</p>
                 </div>
             </div>
@@ -140,7 +152,7 @@
     </section>
     <section id="galeri" class="bg-dark-primary relative z-10">
         <h3 class="text-center text-dark-text pt-5">Most Popular</h3>
-        <h1 class="text-center text-dark-text font-bold text-2xl">Layanan</h1>
+        <h1 class="text-center text-dark-text font-bold text-2xl">Galeri</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10 px-1 sm:px-2 lg:px-3">
             <div class="wrapper">
                 <i id="galeri-kiri"
@@ -148,37 +160,49 @@
                 <ul class="carousel">
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/photo1.jpg" alt="" class="w-full object-cover rounded-xl"
-                                draggable="false">
+                            <img src="dist/assets/img/photo1.jpg" alt="" class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
-                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                                <div class="w-full bg-black h-full rounded-xl no-highlight relative">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
+                                        AKU CAPEK RIN SUMPAH :'</p>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/photo2.jpg" alt="" class="w-full object-cover rounded-xl"
-                                draggable="false">
+                            <img src="dist/assets/img/photo2.jpg" alt="" class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
-                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
+                                        AKU CAPEK RIN SUMPAH :'</p>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/photo3.jpg" alt="" class="w-full object-cover rounded-xl"
-                                draggable="false">
+                            <img src="dist/assets/img/photo3.jpg" alt="" class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
-                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
+                                        AKU CAPEK RIN SUMPAH :'</p>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/photo4.jpg" alt="" class="w-full object-cover rounded-xl"
-                                draggable="false">
+                            <img src="dist/assets/img/photo4.jpg" alt="" class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
-                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
+                                        AKU CAPEK RIN SUMPAH :'</p>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -189,20 +213,26 @@
         </div>
     </section>
 
+    <section>
+        <!-- INI RAKA PUNYA -->
+    </section>
+
     <section id="artikel" class="bg-dark-primary pt-10 pb-2">
         <h3 class="text-center text-dark-text pt-5">Most Popular</h3>
         <h1 class="text-center text-dark-text pt-5 font-bold text-2xl">Artikel Terbaru</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10">
             <div class="wrapper2 w-[80%]">
                 <i id="artikel-kiri"
-                class="bi bi-chevron-left text-black text-4xl bg-white absolute left-10 z-10 rounded-full arrow"></i>
+                    class="bi bi-chevron-left text-black text-4xl bg-white absolutelg: left-10 z-10 rounded-full arrow"></i>
                 <ul class="article">
                     <li class="article-card">
-                        <div class="px-2 rounded-xl relative shadow-lg">
-                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                        <div class="px-2 rounded-xl relative shadow-lg" draggable="false">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" draggable="false"
+                                class="w-full rounded-t-xl rounded-tr-xl" />
                             <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
                                 <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class='mt-4 sm:mt-6 bg-dark-secondary'>
                                     <a href="#"
@@ -213,11 +243,13 @@
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 rounded-xl relative shadow-lg">
-                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                        <div class="px-2 rounded-xl relative shadow-lg" draggable="false">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" draggable="false"
+                                class="w-full rounded-t-xl rounded-tr-xl" />
                             <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
                                 <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class='mt-4 sm:mt-6 bg-dark-secondary'>
                                     <a href="#"
@@ -228,11 +260,13 @@
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg">
-                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                        <div class="px-2 relative shadow-lg" draggable="false">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" draggable="false"
+                                class="w-full rounded-t-xl rounded-tr-xl" />
                             <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
                                 <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class='mt-4 sm:mt-6 bg-dark-secondary'>
                                     <a href="#"
@@ -243,11 +277,13 @@
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg">
-                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                        <div class="px-2 relative shadow-lg" draggable="false">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" draggable="false"
+                                class="w-full rounded-t-xl rounded-tr-xl" />
                             <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
                                 <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class='mt-4 sm:mt-6 bg-dark-secondary'>
                                     <a href="#"
@@ -258,11 +294,13 @@
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg">
-                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                        <div class="px-2 relative shadow-lg" draggable="false">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" draggable="false"
+                                class="w-full rounded-t-xl rounded-tr-xl" />
                             <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
                                 <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class='mt-4 sm:mt-6 bg-dark-secondary'>
                                     <a href="#"
@@ -273,11 +311,13 @@
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg">
-                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                        <div class="px-2 relative shadow-lg" draggable="false">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" draggable="false"
+                                class="w-full rounded-t-xl rounded-tr-xl" />
                             <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
                                 <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class='mt-4 sm:mt-6 bg-dark-secondary'>
                                     <a href="#"
@@ -289,15 +329,9 @@
                     </li>
                 </ul>
                 <i id="artikel-kanan"
-                class="bi bi-chevron-right text-black text-4xl bg-white absolute right-10 z-10 rounded-full arrow"></i>
+                    class="bi bi-chevron-right text-black text-md sm:text-2xl md:text-3xl lg:text-4xl bg-white absolute right-3 sm:right-5 md:right-6 lg:right-10 xl:right-14 z-10 rounded-full arrow"></i>
             </div>
         </div>
-
-
-    </section>
-
-    <section id="video" class=" bg-dark-secondary pb-6 ">
-
     </section>
 
     <section id="lokasi" class="bg-dark-primary pb-2 font-poppins">
@@ -334,6 +368,7 @@
 
 
     <section id="subscribe" class="p-6 pb-5 bg-dark-primary">
+        <!-- INI BIAR RAKA YANG LANJUTIN -->
         <div
             class="flex flex-wrap items-center w-full max-w-5xl p-5 mx-auto text-left rounded lg:flex-nowrap md:p-8 font-poppins">
             <div class="flex-1 w-full mb-5 md:mb-0 md:pr-5 lg:pr-10 md:w-1/2">

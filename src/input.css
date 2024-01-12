@@ -39,24 +39,6 @@ body {
     background-image:url(../dist/assets/img/bg.svg);
 }
 
-@keyframes blink{
-    0% {
-        opacity: 100%;
-    }
-    50% {
-        opacity: 0%;
-    }
-}
-
-@keyframes slide{
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
 @keyframes arrowFadeIn {
     0% {background-color: white; color: black;}
     100% {background-color: #647E5D; color: white;}
@@ -64,6 +46,23 @@ body {
 @keyframes arrowFadeOut {
     0% {background-color: #647E5D; color: white;}
     100% {background-color: white; color: black;}
+}
+
+@keyframes highlightFadeIn {
+    0% {@apply opacity-0}
+    100% {@apply opacity-40}
+}
+@keyframes highlightFadeOut {
+    0% {@apply opacity-40}
+    100% {@apply opacity-0}
+}
+@keyframes highlightTextOut {
+    0% {@apply bottom-1/2 -translate-y-1/2}
+    100% {@apply -bottom-20}
+}
+@keyframes highlightTextIn {
+    0% {@apply -bottom-20}
+    100% {@apply bottom-1/2 -translate-y-1/2}
 }
 
 .arrow-fadein {
@@ -75,7 +74,7 @@ body {
     animation: arrowFadeOut 0.3s ease-in-out;
 }
 
-.carousel :where(.card, .image, .article_card) {
+.carousel :where(.card, .image) {
     @apply flex items-center justify-center;
 }
 
@@ -89,29 +88,39 @@ body {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
-.carousel::-webkit-scrollbar {
-    @apply hidden
-}
-.carousel.dragging .card {
-    @apply cursor-grab select-none
-}
-.carousel.dragging {
-    @apply scroll-auto
-}
-.carousel.no-transition{
-    @apply scroll-auto
-}
-.carousel .card {
-    @apply list-none cursor-pointer /*snap-start*/
-}
 .highlight {
-    opacity: 0.4;
+    @apply opacity-40;
+    animation: highlightFadeIn 200ms ease-in-out;
+}
+.no-highlight {
+    @apply opacity-0;
+    animation: highlightFadeOut 200ms ease-in-out;
+}
+.highlight-text {
+    @apply bottom-1/2 -translate-y-1/2;
+    animation: highlightTextIn 200ms ease-in-out;
+}
+.no-highlight-text {
+    @apply -bottom-20;
+    animation: highlightTextOut 200ms ease-in-out;
 }
 .wrapper2 .article {
     @apply grid grid-flow-col justify-start flex-col overflow-hidden scroll-smooth auto-cols-[calc(100%)] sm:auto-cols-[calc(100%/2)] lg:auto-cols-[calc(100%/3)];
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
-.article .article_card {
-    @apply list-none cursor-pointer;
+.article.dragging .article-card {
+    @apply cursor-grab select-none
+}
+.article.dragging {
+    @apply scroll-auto
+}
+.article.no-transition{
+    @apply scroll-auto
+}
+.article::-webkit-scrollbar {
+    @apply hidden
+}
+.article .article-card {
+    @apply list-none cursor-pointer /*snap-start*/
 }
