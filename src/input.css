@@ -4,8 +4,8 @@
 
 @layer base {
     @font-face {
-        font-family: Poppins;
-        src: url(assets/fonts/Poppins-Light.ttf);
+        font-family: Montserrat;
+        src: url(assets/fonts/Montserrat-Medium.woff) format('woff');
     }
 }
 
@@ -14,7 +14,7 @@
 } */
 
 body {
-    font-family: 'Poppins', serif;
+    font-family: 'Montserrat', serif;
 }
 
 .navbar-fixed{
@@ -36,7 +36,7 @@ body {
     @apply rotate-45 ;
 }
 #hero>div {
-    background-image:url(../assets/img/bg.svg);
+    background-image:url(../dist/assets/img/bg.svg);
 }
 
 @keyframes blink{
@@ -56,27 +56,32 @@ body {
         transform: translateX(-100%);
     }
 }
-@keyframes arrowHover{
-    from {
-        @apply bg-white
-    }
-    to {
-        @apply bg-dark-secondary
-    }
+
+@keyframes arrowFadeIn {
+    0% {background-color: white; color: black;}
+    100% {background-color: #647E5D; color: white;}
+}
+@keyframes arrowFadeOut {
+    0% {background-color: #647E5D; color: white;}
+    100% {background-color: white; color: black;}
 }
 
+.arrow-fadein {
+    @apply bg-dark-secondary text-white;
+    animation: arrowFadeIn 0.3s ease-in-out;
+}
+.arrow-fadeout {
+    @apply bg-white text-black;
+    animation: arrowFadeOut 0.3s ease-in-out;
+}
 
-.carousel :where(.card, .image) {
+.carousel :where(.card, .image, .article_card) {
     @apply flex items-center justify-center;
 }
 
-.wrapper .arrow {
+.wrapper .arrow, .wrapper2 .arrow {
     @apply cursor-pointer absolute top-1/2;
     transform: translateY(-50%);
-}
-.wrapper .arrow:hover {
-    @apply bg-dark-secondary;
-    animation: arrowHover 0.2s;
 }
 
 .wrapper .carousel {
@@ -98,4 +103,15 @@ body {
 }
 .carousel .card {
     @apply list-none cursor-pointer /*snap-start*/
+}
+.highlight {
+    opacity: 0.4;
+}
+.wrapper2 .article {
+    @apply grid grid-flow-col justify-start flex-col overflow-hidden scroll-smooth auto-cols-[calc(100%)] sm:auto-cols-[calc(100%/2)] lg:auto-cols-[calc(100%/3)];
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.article .article_card {
+    @apply list-none cursor-pointer;
 }

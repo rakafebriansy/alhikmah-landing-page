@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./dist/output.css">
 </head>
@@ -16,7 +15,7 @@
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
                     <a href="#home" class="font-bold text-lg text-white block py-6">
-                        <img src="assets/img/logo.svg" class="w-[30%]" alt="">
+                        <img src="dist/assets/img/logo.svg" class="w-[30%]" alt="">
                     </a>
                 </div>
                 <div class="flex items-center p-4">
@@ -69,21 +68,44 @@
     </header>
     <section id="hero" class="dark:bg-emerald-700">
         <div class="relative">
-            <img src="assets/img/bg.svg" alt="">
-            <img src="assets/img/pemandangan-2.svg" id="pemandangan" class="top-0 absolute z-[1]">
-            <img src="assets/img/masjid-2.svg" id="masjid" class="absolute top-0 z-[2]">
-            <!-- <img src="assets/img/awan-1.svg" id="awan-1" class="z-[3] w-[20%] absolute top-4 left-5 sm:top-10 sm:left-5 md:top-14 md:left-10 lg:top-20 lg:left-14 xl:top-24 xl:left-16">
-            <img src="assets/img/awan-2.svg" id="awan-2" class="z-[4] w-[5%] absolute top-7 left-[13.5rem] sm:left-96 sm:top-16 md:top-20 md:left-[29rem] lg:top-28 lg:left-[38rem] xl:top-32 xl:left-[48rem]">
-            <img src="assets/img/awan-3.svg" id="awan-3" class="z-[5] w-[25%] absolute top-10 left-24 sm:top-20 sm:left-40 md:top-24 md:left-56 lg:top-36 lg:left-72 xl:top-44 xl:left-[22rem]">
-            <img src="assets/img/awan-4.svg" id="awan-4" class="z-[6] w-[23%] absolute top-6 left-64 sm:top-12 sm:left-[28rem] md:top-16 md:left-[34rem] lg:top-24 lg:left-[45rem] xl:top-28 xl:left-[57rem]"> -->
-            <img src="assets/img/batu-rumput.svg" id="awan-4" class="z-[7] absolute top-0">
+            <img src="dist/assets/img/bg.svg" alt="">
+            <img src="dist/assets/img/pemandangan-2.svg" id="pemandangan" class="top-0 absolute z-[1]">
+            <img src="dist/assets/img/masjid-2.svg" id="masjid" class="absolute top-0 z-[2]">
+            <img src="dist/assets/img/awan-1.svg" id="awan-1"
+                class="z-[3] w-[20%] absolute top-4 left-5 sm:top-10 sm:left-5 md:top-14 md:left-10 lg:top-20 lg:left-14 xl:top-24 xl:left-16">
+            <img src="dist/assets/img/awan-2.svg" id="awan-2"
+                class="z-[4] w-[5%] absolute top-7 left-[13.5rem] sm:left-96 sm:top-16 md:top-20 md:left-[29rem] lg:top-28 lg:left-[38rem] xl:top-32 xl:left-[48rem]">
+            <img src="dist/assets/img/awan-3.svg" id="awan-3"
+                class="z-[5] w-[25%] absolute top-10 left-24 sm:top-20 sm:left-40 md:top-24 md:left-56 lg:top-36 lg:left-72 xl:top-44 xl:left-[22rem]">
+            <img src="dist/assets/img/awan-4.svg" id="awan-4"
+                class="z-[6] w-[23%] absolute top-6 left-64 sm:top-12 sm:left-[28rem] md:top-16 md:left-[34rem] lg:top-24 lg:left-[45rem] xl:top-28 xl:left-[57rem]">
+            <img src="dist/assets/img/batu-rumput.svg" id="awan-4" class="z-[7] absolute top-0">
         </div>
     </section>
-    <section id="deskripsi" class="bg-dark-primary z-10 relative">
-        <h1 class="text-dark-text font-semibold text-2xl text-center pt-5">Jelajahi keindahan Islam di tengah kehidupan modern </h1>
-        <div class="flex justify-center">
-            <div class="w-[70%] my-5">
-                <p class="text-center text-dark-text">Cari tempat healing dari masalah kehidupan sehari - hari? Mari bergabung dalam perjalanan yang penuh ketenangan dan keindahan di Masjid Al-Hikmah</p>
+    <section id="deskripsi" class="bg-dark-primary z-10 relative py-14 lg:py-36">
+        <h1 class="text-center text-dark-text font-bold text-2xl lg:text-5xl pb-14">Lihat Lebih Dekat</h1>
+        <div class="lg:flex">
+            <div class="flex justify-center ">
+                <div class="w-[72%]">
+                    <h1
+                        class="text-dark-text lg:text-start font-medium text-xl sm:text-4xl text-center mt-5 sm:mt-10 md:mt-14">
+                        Jelajahi keindahan Islam di tengah kehidupan modern </h1>
+                    <p
+                        class="text-center lg:text-start my-5 sm:my-10 text-dark-text text-sm sm:text-xl font-extralight">
+                        Cari tempat healing dari masalah kehidupan sehari - hari? Mari bergabung dalam perjalanan yang
+                        penuh ketenangan dan keindahan di Masjid Al-Hikmah</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div class="w-[80%] mb-5 sm:mb-10 md:mb-14 lg:mt-14 flex items-center">
+                    <video width="300" height="240" controls class="w-full rounded-lg bg-dark-secondary">
+                        <source
+                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                            type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </section>
@@ -91,22 +113,27 @@
         <h3 class="text-center text-dark-text pt-5">Most Popular</h3>
         <h1 class="text-center text-dark-text pt-5 font-bold text-2xl">Layanan</h1>
         <div class="flex justify-center">
-            <div class="w-[70%] grid grid-cols-2 grid-rows-2 mt-5 gap-y-7 sm:gap-y-12 md:gap-y-16 lg:gap-y-28 xl:gap-y-32">
+            <div
+                class="w-[70%] grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 mt-5 gap-y-7 sm:gap-y-12 md:gap-y-16 lg:gap-y-28 xl:gap-y-32">
                 <div class="w-[50%] justify-self-center">
-                    <img src="assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">Belajar Mengaji</p>
+                    <img src="dist/assets/img/frame.png" alt="frame" class="">
+                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                        Belajar Mengaji</p>
                 </div>
                 <div class="w-[50%] justify-self-center">
-                    <img src="assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">Bedah Hadits</p>
+                    <img src="dist/assets/img/frame.png" alt="frame" class="">
+                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                        Bedah Hadits</p>
                 </div>
                 <div class="w-[50%] justify-self-center">
-                    <img src="assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">Kajian Rutin</p>
+                    <img src="dist/assets/img/frame.png" alt="frame" class="">
+                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                        Kajian Rutin</p>
                 </div>
                 <div class="w-[50%] justify-self-center">
-                    <img src="assets/img/frame.png" alt="frame" class="">
-                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">Tilawah</p>
+                    <img src="dist/assets/img/frame.png" alt="frame" class="">
+                    <p class="text-white text-[0.6rem] sm:text-sm md:text-base lg:text-lg xl:text-xl text-center mt-2">
+                        Tilawah</p>
                 </div>
             </div>
         </div>
@@ -116,87 +143,161 @@
         <h1 class="text-center text-dark-text font-bold text-2xl">Layanan</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10 px-1 sm:px-2 lg:px-3">
             <div class="wrapper">
-                <img id="kiri" src="assets/img/left-arrow.png" class="h-[10%] p-[0.15rem] sm:h-[10%] sm:p-1 md:h-[12%] md:py-2 md:px-1 lg:w-[2%] lg:h-[8%] lg:p-2 rounded-r-md arrow bg-white left-0" alt="">
+                <i id="galeri-kiri"
+                    class="bi bi-chevron-left text-black text-4xl bg-white absolute left-0 z-10 rounded-r-lg arrow"></i>
                 <ul class="carousel">
                     <li class="card">
-                        <div class="px-2 rounded-xl">
-                            <img src="assets/img/photo1.jpg" alt="" class="w-full object- rounded-xl" draggable="false">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/photo1.jpg" alt="" class="w-full object-cover rounded-xl"
+                                draggable="false">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                            </div>
                         </div>
                     </li>
                     <li class="card">
-                        <div class="px-2 rounded-xl">
-                            <img src="assets/img/photo2.jpg" alt="" class="w-full object- rounded-xl" draggable="false">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/photo2.jpg" alt="" class="w-full object-cover rounded-xl"
+                                draggable="false">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                            </div>
                         </div>
                     </li>
                     <li class="card">
-                        <div class="px-2 rounded-xl">
-                            <img src="assets/img/photo3.jpg" alt="" class="w-full object- rounded-xl" draggable="false">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/photo3.jpg" alt="" class="w-full object-cover rounded-xl"
+                                draggable="false">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                            </div>
                         </div>
                     </li>
                     <li class="card">
-                        <div class="px-2 rounded-xl">
-                            <img src="assets/img/photo4.jpg" alt="" class="w-full object- rounded-xl" draggable="false">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/photo4.jpg" alt="" class="w-full object-cover rounded-xl"
+                                draggable="false">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl hidden highlight"></div>
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <img id="kanan" src="assets/img/right-arrow.png" class="h-[10%] p-[0.15rem] sm:h-[10%] sm:p-1  md:h-[12%] md:py-2 md:px-1 lg:w-[2%] lg:h-[8%] lg:p-2 rounded-l-md arrow bg-white  right-0" alt="">
+                <i id="galeri-kanan"
+                    class="bi bi-chevron-right text-black text-4xl bg-white absolute right-0 z-10 rounded-l-lg arrow"></i>
             </div>
         </div>
     </section>
-    <!-- DIBAWAH INI YA RINN, MANGAATTSSS -->
 
     <section id="artikel" class="bg-dark-primary pt-10 pb-2">
         <h3 class="text-center text-dark-text pt-5">Most Popular</h3>
         <h1 class="text-center text-dark-text pt-5 font-bold text-2xl">Artikel Terbaru</h1>
+        <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10">
+            <div class="wrapper2 w-[80%]">
+                <i id="artikel-kiri"
+                class="bi bi-chevron-left text-black text-4xl bg-white absolute left-10 z-10 rounded-full arrow"></i>
+                <ul class="article">
+                    <li class="article-card">
+                        <div class="px-2 rounded-xl relative shadow-lg">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                                    <a href="#"
+                                        class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
+                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-card">
+                        <div class="px-2 rounded-xl relative shadow-lg">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                                    <a href="#"
+                                        class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
+                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-card">
+                        <div class="px-2 relative shadow-lg">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                                    <a href="#"
+                                        class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
+                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-card">
+                        <div class="px-2 relative shadow-lg">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                                    <a href="#"
+                                        class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
+                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-card">
+                        <div class="px-2 relative shadow-lg">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                                    <a href="#"
+                                        class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
+                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="article-card">
+                        <div class="px-2 relative shadow-lg">
+                            <img src="https://source.unsplash.com/600x400" alt="Image" class="w-full rounded-t-xl rounded-tr-xl" />
+                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
+                                <p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                                    <a href="#"
+                                        class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
+                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i id="artikel-kanan"
+                class="bi bi-chevron-right text-black text-4xl bg-white absolute right-10 z-10 rounded-full arrow"></i>
+            </div>
+        </div>
 
-    <div class="container mx-auto px-6 font-poppins sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly py-6 ">		
-		<div class="rounded-lg shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:mb-0 lg:w-72 ">
-			<img src="https://source.unsplash.com/600x400" alt="Image" class="w-full "/>
-			<div class="px-6 py-4 bg-dark-secondary">
-				<div class=" font-semibold text-xl mb-2 text-dark-text">Judul</div>
-				<p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
-                    <a href="#" class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                    shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
-                </div>
-			</div>
-            
-		</div>
-		<div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:mb-0 lg:w-72">
-			<img src="https://source.unsplash.com/600x400" alt="Image" class="w-full"/>
-			<div class="px-6 py-4 bg-dark-secondary">
-				<div class="font-semibold text-xl mb-2 text-dark-text">Judul</div>
-				<p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
-                    <a href="#" class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                    shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
-                </div>
-			</div>
-		</div>
-		<div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:mb-0 lg:w-72">
-			<img src="https://source.unsplash.com/600x400" alt="Image" class="w-full"/>
-			<div class="px-6 py-4 bg-dark-secondary">
-				<div class="font-semibold text-xl mb-2 text-dark-text">Judul</div>
-				<p class="text-xs text-dark-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
-                    <a href="#" class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                    shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
-                </div>
-			</div>           
-		</div>
-    </div>
+
     </section>
 
     <section id="video" class=" bg-dark-secondary pb-6 ">
-        <h3 class="text-center text-dark-text pt-5">Most Popular</h3>
-        <h1 class="text-center text-dark-text pt-5 font-bold text-2xl pb-6">Lihat lebih dekat</h1>
-        <a href="#!" class="lg:w-1/2 py-8">
-            <video width="300" height="240" controls class="w-full rounded-lg bg-dark-secondary">
-                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-        </a>
+
     </section>
 
     <section id="lokasi" class="bg-dark-primary pb-2 font-poppins">
@@ -216,22 +317,25 @@
                         <div class="max-w-full mx-auto rounded-lg overflow-hidden">
                             <div class="px-6 py-4">
                                 <h3 class="text-base font-semibold text-dark-text md:text-lg lg:text-xl">Alamat</h3>
-                                <p class="mt-1 text-sm text-dark-text md:text-base lg:text-lg ">Jl. Melati no.23, Surabaya, Jawa Timur</p>
+                                <p class="mt-1 text-sm text-dark-text md:text-base lg:text-lg ">Jl. Melati no.23,
+                                    Surabaya, Jawa Timur</p>
                             </div>
                             <div class="border-t border-gray-200 px-6 py-4">
                                 <h3 class="text-base font-semibold text-dark-text md:text-lg lg:text-xl">Jam Buka</h3>
-                                <p class="mt-1 text-sm text-dark-text md:text-base lg:text-lg">Senin - Minggu: 03:30 - 23:59</p>                                
-                            </div>                        
+                                <p class="mt-1 text-sm text-dark-text md:text-base lg:text-lg">Senin - Minggu: 03:30 -
+                                    23:59</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
 
     <section id="subscribe" class="p-6 pb-5 bg-dark-primary">
-        <div class="flex flex-wrap items-center w-full max-w-5xl p-5 mx-auto text-left rounded lg:flex-nowrap md:p-8 font-poppins">
+        <div
+            class="flex flex-wrap items-center w-full max-w-5xl p-5 mx-auto text-left rounded lg:flex-nowrap md:p-8 font-poppins">
             <div class="flex-1 w-full mb-5 md:mb-0 md:pr-5 lg:pr-10 md:w-1/2">
                 <h3 class="mb-2 text-xl font-bold text-dark-text text-center lg:text-left ">Bergabung dengan Kami</h3>
                 <p class=" text-sm text-center text-dark-text lg:text-left lg:text-base ">
@@ -241,8 +345,11 @@
             <div class="w-full px-1 flex-0 md:w-auto lg:w-1/2">
                 <form novalidate=""><input type="hidden" name="tags" value="earlyaccess">
                     <div class="flex flex-col sm:flex-row">
-                        <input type="email" id="email" name="email" placeholder="Your Email" class="flex-1 px-3 py-2 text-base placeholder-gray-400 border border-gray-300 rounded-lg sm:mr-5 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 ">
-                        <button type="submit" class="w-full px-4 py-3 mt-5 hover:text-dark-primary hover:bg-dark-text font-semibold rounded-xl sm:mt-0 sm:w-auto whitespace-nowrap bg-dark-secondary text-dark-text"> Subscribe </button>
+                        <input type="email" id="email" name="email" placeholder="Your Email"
+                            class="flex-1 px-3 py-2 text-base placeholder-gray-400 border border-gray-300 rounded-lg sm:mr-5 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 ">
+                        <button type="submit"
+                            class="w-full px-4 py-3 mt-5 hover:text-dark-primary hover:bg-dark-text font-semibold rounded-xl sm:mt-0 sm:w-auto whitespace-nowrap bg-dark-secondary text-dark-text">
+                            Subscribe </button>
                     </div>
                 </form>
             </div>
@@ -271,8 +378,10 @@
                 <div class="p-5">
                     <div class="text-sm uppercase text-dark-primary font-bold">Contact us</div>
                     <a class="my-3 block" href="/#">0812823898291<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block" href="/#">Jl.Melati No.23, Surabaya, Jawa Timur<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block" href="/#">masjid@gmail.com <span class="text-dark-primary text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">Jl.Melati No.23, Surabaya, Jawa Timur<span
+                            class="text-dark-primary text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">masjid@gmail.com <span
+                            class="text-dark-primary text-xs p-1"></span></a>
                 </div>
             </div>
         </div>
@@ -288,12 +397,12 @@
                 <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
             </a>
         </div>
-        <p class="text-center text-sm text-dark-primary font-medium pb-6 pt-2">&copy; 2022 Company Ltd. All rights reservered.</p>
+        <p class="text-center text-sm text-dark-primary font-medium pb-6 pt-2">&copy; 2022 Company Ltd. All rights
+            reservered.</p>
     </section>
 
 
     <script src="dist/jquery-3.7.0.js"></script>
-    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="dist/script.js"></script>
 </body>
 
