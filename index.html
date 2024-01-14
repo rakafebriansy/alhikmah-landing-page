@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
             document.documentElement.classList.remove('dark');
         }
     </script>
-    
 </head>
 
 <body>
@@ -33,7 +32,7 @@
                         <span class="hamburger-line origin-bottom-right transition duration-300 ease-in-out"></span>
                     </button>
                     <nav id="nav-menu"
-                        class="hidden absolute py-5 bg-[#344D2F] shadow-lg rounded-lg max-w-[220px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-secondary lg:dark:bg-transparent">
+                        class="hidden absolute py-5 bg-[#344D2F] rounded-lg max-w-[220px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-secondary lg:dark:bg-transparent">
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a href="#layanan"
@@ -60,20 +59,21 @@
                                     <input type="checkbox" class="hidden" id="dark-toggle">
                                     <label for="dark-toggle">
                                         <div
-                                            class="toggle-bg flex h-5 w-9 cursor-pointer items-center rounded-full bg-dark p-1 transition duration-300 ease-in-out">
+                                            class="toggle-bg flex h-5 w-9 cursor-pointer items-center rounded-full bg-white p-1 transition duration-300 ease-in-out">
                                             <div
-                                                class="toggle-round h-4 w-4 rounded-full bg-secondary transition duration-300 ease-in-out">
+                                                class="toggle-round h-4 w-4 rounded-full bg-light-secondary transition duration-300 ease-in-out">
                                             </div>
                                         </div>
                                     </label>
                                 </div>
-                            </li>                          
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
     <section id="hero" class="dark:bg-emerald-700">
         <div class="relative overflow-hidden">
             <img src="dist/assets/img/bg.svg" alt="">
@@ -87,26 +87,30 @@
                 class="z-[5] w-[25%] absolute top-10 left-24 sm:top-20 sm:left-40 md:top-24 md:left-56 lg:top-36 lg:left-72 xl:top-44 xl:left-[22rem]">
             <img src="dist/assets/img/awan-4.svg" id="awan-4"
                 class="z-[6] w-[23%] absolute top-6 left-64 sm:top-12 sm:left-[28rem] md:top-16 md:left-[34rem] lg:top-24 lg:left-[45rem] xl:top-28 xl:left-[57rem]">
-            <img src="dist/assets/img/batu-rumput.svg" id="awan-4" class="z-[7] absolute top-0">
+                <img src="dist/assets/img/rumput.svg" id="rumput" class="z-[7] absolute top-0">
+                <img src="dist/assets/img/batu.svg" class="z-[8] absolute top-0">
         </div>
     </section>
+
     <section id="deskripsi" class="dark:bg-dark-primary bg-light-secondary z-10 relative pt-10 pb-3 lg:py-10">
-        <h1 class="text-center dark:text-dark-text text-light-text1 font-bold text-2xl lg:text-5xl pb-6">Lihat Lebih Dekat</h1>
-        <div class="lg:flex">
-            <div class="flex justify-center ">
-                <div class="w-[72%]">
+        <h1 class="text-center dark:text-dark-text text-light-text1 font-bold text-2xl lg:text-5xl pb-6">Lihat Lebih
+            Dekat</h1>
+        <div class="lg:grid grid-cols-5">
+            <div class="flex justify-center col-span-3">
+                <div class="w-[80%]">
                     <h1
                         class="dark:text-dark-text text-light-text1 lg:text-start font-semibold text-xl sm:text-4xl text-center mt-5 sm:mt-10 md:mt-14">
                         Destinasi Wisata Masjid Al-Hikmah </h1>
                     <p
                         class="text-center lg:text-start my-5 sm:my-10 dark:text-dark-text text-light-text1 sm:text-xl font-extralight">
-                        Masjid Al-Hikmah merupakan masjid fiktif yang kami buat. Meskipun berupa masjid fiktif, kami 
-                        membuat gambaran dengan masjid yang memberikan ketenangan pada tiap perjalanan pengunjungnya sebagai bentuk mendekatkan diri pada Allah SWT. </p>
+                        Masjid Al-Hikmah merupakan masjid fiktif yang kami buat. Meskipun berupa masjid fiktif, kami
+                        membuat gambaran dengan masjid yang memberikan ketenangan pada tiap perjalanan pengunjungnya
+                        sebagai bentuk mendekatkan diri pada Allah SWT. </p>
                 </div>
             </div>
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center col-span-2">
                 <div class="w-[80%] mb-5 sm:mb-10 md:mb-14 lg:mt-14 flex items-center">
-                    <video width="300" height="240" controls class="w-full rounded-lg bg-dark-secondary">
+                    <video controls class="w-full rounded-lg bg-dark-secondary">
                         <source
                             src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
                             type="video/mp4">
@@ -117,9 +121,10 @@
             </div>
         </div>
     </section>
+
     <section id="layanan" class="bg-light-primary dark:bg-dark-secondary relative z-10 pb-10 pt-5 lg:py-10">
-        <h3 class="text-center dark:text-dark-text text-light-text2">Menyediakan</h3>
-        <h1 class="text-center dark:text-dark-text text-light-text2 pt-3 pb-3 font-bold text-2xl">Layanan</h1>
+        <h3 class="text-center dark:text-dark-text text-light-text1">Menyediakan</h3>
+        <h1 class="text-center dark:text-dark-text text-light-text1 pt-3 pb-3 font-bold text-2xl">Layanan</h1>
         <div class="flex justify-center">
             <div
                 class="w-[70%] grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 mt-5 gap-y-7 sm:gap-y-12 md:gap-y-16 lg:gap-y-28 xl:gap-y-32">
@@ -159,17 +164,19 @@
             </div>
         </div>
     </section>
+
     <section id="galeri" class=" bg-light-secondary dark:bg-dark-primary relative z-10 pb-10 pt-5 lg:py-10">
-        <h3 class="text-center text-light-text2 dark:text-dark-text pt-5">Sisi Masjid</h3>
-        <h1 class="text-center text-light-text2 dark:text-dark-text font-bold text-2xl pt-3 pb-3">Galeri</h1>
+        <h3 class="text-center text-light-text1 dark:text-dark-text pt-5">Sisi Masjid</h3>
+        <h1 class="text-center text-light-text1 dark:text-dark-text font-bold text-2xl pt-3 pb-3">Galeri</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10 px-1 sm:px-2 lg:px-3">
             <div class="wrapper">
                 <i id="galeri-kiri"
-                    class="bi bi-chevron-left text-black text-2xl text-center bg-white absolute left-4 z-10 rounded-full w-8 h-8  arrow"></i>
+                    class="bi bi-chevron-left text-2xl text-center absolute left-4 z-10 rounded-full w-8 h-8 arrow"></i>
                 <ul class="carousel">
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/tempat-beribadah.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <img src="dist/assets/img/tempat-beribadah.jpg" alt=""
+                                class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
                                 <div class="w-full bg-black h-full rounded-xl no-highlight relative">
                                     <p
@@ -265,126 +272,331 @@
                     </li>
                 </ul>
                 <i id="galeri-kanan"
-                    class="bi bi-chevron-right text-black text-2xl text-center bg-white absolute right-4 z-10 rounded-full w-8 h-8 arrow"></i>
+                    class="bi bi-chevron-right text-2xl text-center absolute right-4 z-10 rounded-full w-8 h-8 arrow"></i>
             </div>
         </div>
     </section>
 
-    <section>
-        <!-- INI RAKA PUNYA -->
+    <section id="pengunjung" class="p-6 lg:p-3 bg-light-primary dark:bg-dark-secondary">
+        <h3 class="text-center text-light-text1 dark:text-dark-text pt-5">Partisipasi</h3>
+        <h1 class="text-center text-light-text1 dark:text-dark-text font-bold text-2xl pt-3 pb-3">Pengunjung dan
+            Pengelola</h1>
+        <div class="mx-2 md:p-3 md:grid md:grid-cols-2">
+            <div class="mb-5 md:mb-0">
+                <div class="flex justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10">
+                    <div class="wrapper3 md:w-[80%]">
+                        <ul class="comment">
+                            <li class="comment-card">
+                                <div class="p-4 mx-2 lg:max-w-[70%] rounded-xl relative shadow-lg bg-white"
+                                    draggable="false">
+                                    <div class="grid grid-cols-4 p-2">
+                                        <div class="col-span-1">
+                                            <div
+                                                class="bg-[#D9D9D9] ms-[20%] rounded-full w-10 h-10 flex justify-center items-center">
+                                                <img src="dist/assets/img/user.svg" alt="" class="w-90%">
+                                            </div>
+                                        </div>
+                                        <div class="col-span-3 flex justify-center items-center">
+                                            <p>Ahmad Hasyim</p>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-white rounded-b-xl rounded-bl-xl">
+                                        <hr class="my-2">
+                                        <p class="text-xs text-black">Masjidnya bagus, luas, sejuk, enak dehh, terus
+                                            tempat wudhunya banyak, kamar mandinya juga bersih dan airnya lancar. Seneng
+                                            banget kesini, hawanya tenang bisa sambil baca Al-Quran dibuat sholat enak
+                                            rasanya lebih khusyu aja. Pokonya betah banget buat lama-lama di sini. </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment-card">
+                                <div class="p-4 mx-2 lg:max-w-[70%] rounded-xl relative shadow-lg bg-white"
+                                    draggable="false">
+                                    <div class="grid grid-cols-4 p-2">
+                                        <div class="col-span-1">
+                                            <div
+                                                class="bg-[#D9D9D9] ms-[20%] rounded-full w-10 h-10 flex justify-center items-center">
+                                                <img src="dist/assets/img/user.svg" alt="" class="w-90%">
+                                            </div>
+                                        </div>
+                                        <div class="col-span-3 flex justify-center items-center">
+                                            <p>Nurjannah</p>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-white rounded-b-xl rounded-bl-xl">
+                                        <hr class="my-2">
+                                        <p class="text-xs text-black">Kunjungan wisata ke Masjid Al Hikmah memberikan
+                                            pengalaman memukau dengan keindahan arsitektur yang menakjubkan.
+                                            Detail-detail ukiran dan desain interior masjid menciptakan suasana yang
+                                            tenang dan mempesona.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment-card">
+                                <div class="p-4 mx-2 lg:max-w-[70%] rounded-xl relative shadow-lg bg-white"
+                                    draggable="false">
+                                    <div class="grid grid-cols-4 p-2">
+                                        <div class="col-span-1">
+                                            <div
+                                                class="bg-[#D9D9D9] ms-[20%] rounded-full w-10 h-10 flex justify-center items-center">
+                                                <img src="dist/assets/img/user.svg" alt="" class="w-90%">
+                                            </div>
+                                        </div>
+                                        <div class="col-span-3 flex justify-center items-center">
+                                            <p>Muhammad Ilyas</p>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-white rounded-b-xl rounded-bl-xl">
+                                        <hr class="my-2">
+                                        <p class="text-xs text-black">Masjid Al Hikmah tidak hanya sebuah tempat ibadah,
+                                            tetapi juga menjadi penanda sejarah dan budaya. Kunjungan ini memberikan
+                                            kesempatan untuk memahami warisan budaya dan kekayaan sejarah Islam yang
+                                            terkandung di dalamnya.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment-card">
+                                <div class="p-4 mx-2 lg:max-w-[70%] rounded-xl relative shadow-lg bg-white"
+                                    draggable="false">
+                                    <div class="grid grid-cols-4 p-2">
+                                        <div class="col-span-1">
+                                            <div
+                                                class="bg-[#D9D9D9] ms-[20%] rounded-full w-10 h-10 flex justify-center items-center">
+                                                <img src="dist/assets/img/user.svg" alt="" class="w-90%">
+                                            </div>
+                                        </div>
+                                        <div class="col-span-3 flex justify-center items-center">
+                                            <p>
+                                                Ahmad Naufal
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-white rounded-b-xl rounded-bl-xl">
+                                        <hr class="my-2">
+                                        <p class="text-xs text-black">Mengunjungi Masjid Al Hikmah memberikan kesempatan
+                                            untuk merasakan atmosfer religius yang khusyuk. Suasana tenang dan doa yang
+                                            terdengar di dalam masjid menciptakan pengalaman spiritual yang mendalam.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment-card">
+                                <div class="p-4 mx-2 lg:max-w-[70%] rounded-xl relative shadow-lg bg-white"
+                                    draggable="false">
+                                    <div class="grid grid-cols-4 p-2">
+                                        <div class="col-span-1">
+                                            <div
+                                                class="bg-[#D9D9D9] ms-[20%] rounded-full w-10 h-10 flex justify-center items-center">
+                                                <img src="dist/assets/img/user.svg" alt="" class="w-90%">
+                                            </div>
+                                        </div>
+                                        <div class="col-span-3 flex justify-center items-center">
+                                            <p>Ali Subakir
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-white rounded-b-xl rounded-bl-xl">
+                                        <hr class="my-2">
+                                        <p class="text-xs text-black">Selain sebagai tempat ibadah, Masjid Al Hikmah
+                                            juga berfungsi sebagai pusat pendidikan agama. Kunjungan ini memberikan
+                                            kesempatan untuk memahami peran masjid dalam memberikan edukasi agama kepada
+                                            masyarakat.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="comment-card">
+                                <div class="p-4 mx-2 lg:max-w-[70%] rounded-xl relative shadow-lg bg-white"
+                                    draggable="false">
+                                    <div class="grid grid-cols-4 p-2">
+                                        <div class="col-span-1">
+                                            <div
+                                                class="bg-[#D9D9D9] ms-[20%] rounded-full w-10 h-10 flex justify-center items-center">
+                                                <img src="dist/assets/img/user.svg" alt="" class="w-90%">
+                                            </div>
+                                        </div>
+                                        <div class="col-span-3 flex justify-center items-center">
+                                            <p>Natasya Subagio</p>
+                                        </div>
+                                    </div>
+                                    <div class=" bg-white rounded-b-xl rounded-bl-xl">
+                                        <hr class="my-2">
+                                        <p class="text-xs text-black">Keunikan dari Masjid Al Hikmah adalah
+                                            keterbukaannya terhadap pengunjung non-Muslim. Ini menjadi peluang untuk
+                                            memahami lebih dalam nilai toleransi dan kerukunan antarumat beragama yang
+                                            dijunjung tinggi di tempat ini.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full grid grid-cols-2 text-light-text1 dark:text-dark-text">
+                <div class="w-full h-full flex items-center justify-center">
+                    <div class="w-[70%] h-[70%] flex justify-center items-center">
+                        <div class="">
+                            <p class="text-3xl font-bold text-center">1.875</p>
+                            <p class="text-center font-semibold">Pengunjung</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                    <div class="w-[70%] h-[70%] flex justify-center items-center">
+                        <div class="">
+                            <p class="text-3xl font-bold text-center">8</p>
+                            <p class="text-center font-semibold">Imam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                    <div class="w-[70%] h-[70%] flex justify-center items-center">
+                        <div class="">
+                            <p class="text-3xl font-bold text-center">5</p>
+                            <p class="text-center font-semibold">Muadzin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full flex items-center justify-center">
+                    <div class="w-[70%] h-[70%] flex justify-center items-center">
+                        <div class="">
+                            <p class="text-3xl font-bold text-center">20</p>
+                            <p class="text-center font-semibold">Pengurus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="artikel" class=" bg-light-primary dark:bg-dark-primary pt-10 pb-2 lg:py-10">
-        <h3 class="text-center text-light-text2 dark:text-dark-text pt-5">Hadir Terbaru</h3>
-        <h1 class="text-center text-light-text2 dark:text-dark-text pt-3 pb-3 font-bold text-2xl">Artikel</h1>
+    <section id="artikel"
+        class=" text-light-text1 dark:text-dark-text bg-light-secondary dark:bg-dark-primary pt-10 pb-2 lg:py-10">
+        <h3 class="text-center  pt-5">Hadir Terbaru</h3>
+        <h1 class="text-center pt-3 pb-3 font-bold text-2xl">Artikel</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10">
-            <div class="wrapper2 w-[80%]">
+            <div class="wrapper2 w-[80%] text-black dark:text-white">
                 <i id="artikel-kiri"
-                    class="bi bi-chevron-left text-white text-2xl text-center bg-dark-secondary absolute left-4 z-10 rounded-full w-8 h-8 arrow dark:bg-dark-text dark:text-dark-text"></i>
-                <ul class="article">
+                    class="bi bi-chevron-left text-white text-2xl text-center bg-dark-secondary absolute left-4 z-10 rounded-full w-8 h-8 arrow"></i>
+                <ul class="article ">
                     <li class="article-card">
-                        <div class="px-2 rounded-xl relative shadow-lg" draggable="false">
+                        <div class="px-2 rounded-xl relative" draggable="false">
                             <img src="dist/assets/img/artikel.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Kunjungan Gubernur Jawa Timur di Masjid Al-Hikmah</div>
-                                <p class="text-xs text-light-text2 dark:text-dark-text">Kunjungan oleh Gubernur Jawa Timur pada hari kamis tanggal 10 maret 2024 bertujuan..</p>
-                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-white dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2">Kunjungan Gubernur Jawa Timur di Masjid
+                                    Al-Hikmah</div>
+                                <p class="text-xs">Kunjungan oleh Gubernur Jawa Timur pada hari kamis tanggal 10 maret
+                                    2024 bertujuan..</p>
+                                <div class='mt-4 sm:mt-6 bg-white dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                     font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 rounded-xl relative shadow-lg" draggable="false">
+                        <div class="px-2 rounded-xl relative" draggable="false">
                             <img src="dist\assets\img\palestina.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Infografis : 4 Alasan Islam Memuliakan Palestina</div>
-                                <p class="text-xs text-light-text2 dark:text-dark-text">Berikut beberapa rangkuman alasan islam memuliakan tanah palestina: Pertama, tanah.. </p>
-                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-white dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2">Infografis : 4 Alasan Islam Memuliakan
+                                    Palestina</div>
+                                <p class="text-xs">Berikut beberapa rangkuman alasan islam memuliakan tanah palestina:
+                                    Pertama, tanah.. </p>
+                                <div class='mt-4 sm:mt-6 bg-white dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                     font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg" draggable="false">
+                        <div class="px-2 relative" draggable="false">
                             <img src="dist\assets\img\iri-hati.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Iri Hati Melanda? Dinginkan dengan Amalan Berikut!</div>
-                                <p class="text-xs text-light-text2 dark:text-dark-text">Iri hati bukanlah hal yang baik. Oleh karena itu, menjaga hati dari iri hati penting dilaku..</p>
-                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-white dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2">Iri Hati Melanda? Dinginkan dengan Amalan
+                                    Berikut!</div>
+                                <p class="text-xs">Iri hati bukanlah hal yang baik. Oleh karena itu, menjaga hati dari
+                                    iri hati penting dilaku..</p>
+                                <div class='mt-4 sm:mt-6 bg-white dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                     font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg" draggable="false">
+                        <div class="px-2 relative" draggable="false">
                             <img src="dist\assets\img\artikel-4.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Menjadi Manusia yang Menjaga Hablum Minannas</div>
-                                <p class="text-xs text-light-text2 dark:text-dark-text">Sebagai seorang hamba yang taat, menjaga hubungan dengan sesama umat atau manu..</p>
-                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-white dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2">Menjadi Manusia yang Menjaga Hablum Minannas
+                                </div>
+                                <p class="text-xs">Sebagai seorang hamba yang taat, menjaga hubungan dengan sesama umat
+                                    atau manu..</p>
+                                <div class='mt-4 sm:mt-6 bg-white dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                     font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg" draggable="false">
+                        <div class="px-2 relative" draggable="false">
                             <img src="dist\assets\img\artikel-5.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Terus Merasa Kurang? Bersyukur Solusinya!</div>
-                                <p class="text-xs text-light-text2 dark:text-dark-text">Ada kalanya seorang manusia meski telah mendapatkan banyak hal masih terasa kura.. </p>
-                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-white dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2">Terus Merasa Kurang? Bersyukur Solusinya!
+                                </div>
+                                <p class="text-xs">Ada kalanya seorang manusia meski telah mendapatkan banyak hal masih
+                                    terasa kura.. </p>
+                                <div class='mt-4 sm:mt-6 bg-white dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                     font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="article-card">
-                        <div class="px-2 relative shadow-lg" draggable="false">
+                        <div class="px-2 relative" draggable="false">
                             <img src="dist\assets\img\artikel-6.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Hukum Membayar Zakat bagi Umat Muslim</div>
-                                <p class="text-xs text-light-text2 dark:text-dark-text">Pada saat-saat tertentu, kita diwajibkan untuk mengeluarkan sedikit dari harta kita untuk..</p>
-                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-white dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2">Hukum Membayar Zakat bagi Umat Muslim</div>
+                                <p class="text-xs">Pada saat-saat tertentu, kita diwajibkan untuk mengeluarkan sedikit
+                                    dari harta kita untuk..</p>
+                                <div class='mt-4 sm:mt-6 bg-white dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
-                                        shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
+                                     font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </ul>
                 <i id="artikel-kanan"
-                    class="bi bi-chevron-right text-white text-2xl text-center bg-dark-secondary absolute right-4 z-10 rounded-full w-8 h-8 arrow"></i>
+                    class="bi bi-chevron-right text-2xl text-center absolute right-4 z-10 rounded-full w-8 h-8 arrow"></i>
             </div>
         </div>
     </section>
 
-    <section id="subscribe" class="p-6 lg:p-3 bg-light-secondary dark:bg-dark-secondary">
+    <section id="bergabung"
+        class="p-6 lg:p-3 text-light-text1 dark:text-dark-text bg-light-primary dark:bg-dark-secondary">
         <div class="mx-2 md:p-3 lg:grid lg:grid-cols-2">
             <div class="flex items-center justify-center w-full mb-5 md:mb-0">
                 <div class="w-[70%]">
-                    <h3 class="mb-2 text-2xl text-light-text1 dark:text-dark-text font-bold  text-center lg:text-left ">Bergabung dengan Kami</h3>
-                    <p class=" text-sm text-center text-light-text1 dark:text-dark-text lg:text-left lg:text-base ">
+                    <h3 class="mb-2 text-2xl font-bold  text-center lg:text-left ">Bergabung dengan Kami
+                    </h3>
+                    <p class=" text-sm text-center  lg:text-left lg:text-base ">
                         Bergabung dan dapatkan notifikasi tentang informasi, layanan dan artikel terbaru
                     </p>
                 </div>
@@ -392,14 +604,17 @@
             <div class="w-full">
                 <form novalidate=""><input type="hidden" name="tags" value="earlyaccess">
                     <div class="flex flex-col lg:w-[85%]">
-                        <p class="hidden lg:block mb-2 text-xl font-medium text-light-text1 dark:text-dark-text text-center">Isi form dibawah untuk bergabung</p>
+                        <p class="hidden lg:block mb-2 text-xl font-medium  text-center">Isi form dibawah
+                            untuk bergabung</p>
                         <input type="email" id="email" name="email" placeholder="Ketik nama lengkap"
                             class="flex-1 px-3 py-2 my-3 text-base placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 ">
                         <input type="email" id="email" name="email" placeholder="Ketik alamat email"
                             class="flex-1 px-3 py-2 my-3 text-base placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 ">
-                        <textarea name="kritik" id="krisar" cols="30" rows="10" class="flex-1 px-3 py-2 my-3 text-base placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 " placeholder="Ketik kritik dan saran"></textarea>
+                        <textarea name="kritik" id="krisar" cols="30" rows="10"
+                            class="flex-1 px-3 py-2 my-3 text-base placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 "
+                            placeholder="Ketik kritik dan saran"></textarea>
                         <button type="submit"
-                            class="w-full px-4 py-2 my-3 hover:text-dark-primary hover:bg-dark-text font-semibold rounded-xl sm:w-auto whitespace-nowrap bg-dark-primary text-dark-text">
+                            class="w-full px-4 py-2 my-3 hover:text-dark-primary hover:bg-dark-text font-semibold rounded-xl sm:w-auto whitespace-nowrap bg-dark-primary ">
                             Langganan </button>
                     </div>
                 </form>
@@ -408,36 +623,44 @@
     </section>
 
 
-    <section id="footer" class="bg-slate-100 dark:bg-zinc-900 pt-5">
+    <section id="footer" class=bg-zinc-900 pt-5">
         <div class="">
             <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
                 <div class="p-5">
-                    <h3 class="text-center mb-3 font-semibold text-lg lg:text-xl text-dark-primary dark:text-dark-text">Masjid Al-Hikmah</h3>
+                    <h3 class="mb-3 font-semibold md:text-base text-lg lg:text-xl text-dark-text">Masjid Al-Hikmah</h3>
                     <div class="rounded-lg overflow-hidden w-full h-[70%]">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.153889238801!2d112.71260567411318!3d-7.336608772161256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fba9cfb6dfab%3A0x6fe7210ef241206!2sMasjid%20Nasional%20Al-Akbar%20Surabaya!5e0!3m2!1sid!2sid!4v1704808476971!5m2!1sid!2sid"
-                             style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
                 <div class="p-5">
-                    <div class="text-base text-dark-primary dark:text-light-primary font-bold">Layanan</div>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Belajar Mengaji<span class="text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Bedah Hadist<span class="text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Pembayaran Zakat<span class="text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Tur Online<span class="text-xs p-1"></span></a>
+                    <div class="text-base text-light-primary font-bold">Layanan</div>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Belajar Mengaji<span
+                            class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Bedah Hadist<span
+                            class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Pembayaran Zakat<span
+                            class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Tur Online<span
+                            class="text-xs p-1"></span></a>
                 </div>
                 <div class="p-5">
-                    <div class="text-base text-dark-primary dark:text-light-primary font-bold">Kerja Sama</div>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Kementerian Agama<span class="text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Pemerintah Jawa Timur<span class=" text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Pemerintah Daerah Jember<span class=" text-xs p-1"></span></a>
-                </div>
-                <div class="p-5">
-                    <div class="text-base text-dark-primary dark:text-light-primary font-bold">Kontak</div>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">0812-8238-9829<span class="text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Jl.Melati No.23, Sumbersari, Jember, Jawa Timur<span
+                    <div class="text-base text-light-primary font-bold">Kerja Sama</div>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Kementerian Agama<span
+                            class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Pemerintah Jawa Timur<span
                             class=" text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">masjidhikmah@gmail.com <span
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Pemerintah Daerah Jember<span
+                            class=" text-xs p-1"></span></a>
+                </div>
+                <div class="p-5">
+                    <div class="text-base text-light-primary font-bold">Kontak</div>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">0812-8238-9829<span
+                            class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">Jl.Melati No.23, Sumbersari, Jember, Jawa
+                        Timur<span class=" text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-text" href="/#">masjidhikmah@gmail.com <span
                             class="text-xs p-1"></span></a>
                 </div>
             </div>
@@ -453,7 +676,7 @@
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
             </a>
-        </div>      
+        </div>
     </section>
 
 

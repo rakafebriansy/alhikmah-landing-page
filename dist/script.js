@@ -1,6 +1,3 @@
-
-const darkToggle = document.querySelector('#dark-toggle');
-
 //NAVBAR SCROLL
 window.onscroll = function(){
     const HEADER = $('HEADER');
@@ -13,21 +10,28 @@ window.onscroll = function(){
 };
 
 //DARK MODE BUTTON
-darkToggle.addEventListener('click',function(){
-    if (darkToggle.checked) {
-        html.classList.add('dark');
+const HTML = $('html');
+const DARK_TOGGLE = $('#dark-toggle');
+const RUMPUT = $('#rumput');
+DARK_TOGGLE.on('click',() => {
+    if(DARK_TOGGLE[0].checked){
+        HTML.addClass('dark');
         localStorage.theme = 'dark';
+        RUMPUT.attr('src','dist/assets/img/rumput-darken.svg')
     } else {
-        html.classList.remove('dark');
+        HTML.removeClass('dark');
         localStorage.theme = 'light';
+        RUMPUT.attr('src','dist/assets/img/rumput.svg')
     }
-})
-
+});
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    darkToggle.checked=true;
+    DARK_TOGGLE[0].checked=true;
+    RUMPUT.attr('src','dist/assets/img/rumput-darken.svg')
 } else {
-      darkToggle.checked=false;
+    DARK_TOGGLE[0].checked=false;
+    RUMPUT.attr('src','dist/assets/img/rumput.svg')
 }
+
 
 //HAMBURGER MENU
 const HAMBURGER = $('#hamburger');
@@ -47,35 +51,55 @@ $(window).on('click', (e) => {
 const CAROUSEL = $('.carousel');
 const WRAPPER = $('.wrapper');
 const FIRST_CARD_WIDTH = $('.carousel .card')[0].offsetWidth;
-const ARTICLE = $('.article');
-const WRAPPER2 = $('.wrapper2');
-const FIRST_ARTICLE_WIDTH = $('.article .article-card')[0].offsetWidth;
-const ARROW_GALLERY = $('.wrapper .arrow');
-const ARROW_ARTICLE = $('.wrapper2 .arrow');
+const ARROW_CAROUSEL = $('.wrapper .arrow');
 const CAROUSEL_CHILDREN = [...CAROUSEL.children()];
 let is_dragging = false, startX, startScrollLeft, timeoutId;
 let card_per_view = Math.round(CAROUSEL[0].offsetWidth/FIRST_CARD_WIDTH);
-
 $.each(CAROUSEL_CHILDREN.slice(-card_per_view).reverse(), (k,v) => {
     CAROUSEL.prepend($(v).prop('outerHTML'));
 });
 $.each(CAROUSEL_CHILDREN.slice(0, card_per_view), (k,v) => {
     CAROUSEL.append($(v).prop('outerHTML'));
 });
-
-$.each(ARROW_GALLERY, (k,v) => {
+$.each(ARROW_CAROUSEL, (k,v) => {
     $(v).on('click',()=>{
         const FIRST_CARD_WIDTH = $('.carousel .card')[0].offsetWidth;
         CAROUSEL.scrollLeft(CAROUSEL[0].scrollLeft += v.id === 'galeri-kiri'? -FIRST_CARD_WIDTH : FIRST_CARD_WIDTH);
     });
 });
+const autoPlayCarousel = () => {
+    if(window.innerWidth < 768) return;
+    timeoutId = setTimeout(() => CAROUSEL[0].scrollLeft += FIRST_CARD_WIDTH, 2000);
+}
+const infiniteScrollCarousel = () => {
+    if(CAROUSEL.scrollLeft() === 0){
+        CAROUSEL.addClass('no-transition');
+        CAROUSEL.scrollLeft(CAROUSEL[0].scrollWidth - (2*CAROUSEL[0].offsetWidth));
+        CAROUSEL.removeClass('no-transition');
+    } else if (Math.ceil(CAROUSEL.scrollLeft()) === CAROUSEL[0].scrollWidth - CAROUSEL[0].offsetWidth){
+        CAROUSEL.addClass('no-transition');
+        CAROUSEL.scrollLeft(CAROUSEL[0].offsetWidth);
+        CAROUSEL.removeClass('no-transition');
+    }
+    clearTimeout(timeoutId);
+    if(!WRAPPER[0].matches(':hover')) autoPlayCarousel();
+}
+autoPlayCarousel();
+WRAPPER.on('mouseenter',() => clearTimeout(timeoutId));
+WRAPPER.on('mouseleave',() => autoPlayCarousel());
+CAROUSEL.on('scroll',infiniteScrollCarousel);
+
+//ARTICLE
+const ARTICLE = $('.article');
+const WRAPPER2 = $('.wrapper2');
+const FIRST_ARTICLE_WIDTH = $('.article .article-card')[0].offsetWidth;
+const ARROW_ARTICLE = $('.wrapper2 .arrow');
 $.each(ARROW_ARTICLE, (k,v) => {
     $(v).on('click',()=>{
         const FIRST_ARTICLE_WIDTH = $('.article .article-card')[0].offsetWidth;
         ARTICLE.scrollLeft(ARTICLE[0].scrollLeft += v.id === 'artikel-kiri'? -FIRST_ARTICLE_WIDTH : FIRST_ARTICLE_WIDTH);
     });
 });
-
 const dragStart = (e) => {
     is_dragging = true;
     ARTICLE.addClass('dragging');
@@ -90,30 +114,43 @@ const dragStop = () => {
     is_dragging = false;
     ARTICLE.removeClass('dragging');
 }
-const autoPlay = () => {
-    if(window.innerWidth < 768) return;
-    timeoutId = setTimeout(() => CAROUSEL[0].scrollLeft += FIRST_CARD_WIDTH, 2000);
-}
-const infiniteScroll = () => {
-    if(CAROUSEL.scrollLeft() === 0){
-        CAROUSEL.addClass('no-transition');
-        CAROUSEL.scrollLeft(CAROUSEL[0].scrollWidth - (2*CAROUSEL[0].offsetWidth));
-        CAROUSEL.removeClass('no-transition');
-    } else if (Math.ceil(CAROUSEL.scrollLeft()) === CAROUSEL[0].scrollWidth - CAROUSEL[0].offsetWidth){
-        CAROUSEL.addClass('no-transition');
-        CAROUSEL.scrollLeft(CAROUSEL[0].offsetWidth);
-        CAROUSEL.removeClass('no-transition');
-    }
-    clearTimeout(timeoutId);
-    if(!WRAPPER[0].matches(':hover')) autoPlay();
-}
-autoPlay();
-WRAPPER.on('mouseenter',() => clearTimeout(timeoutId));
-WRAPPER.on('mouseleave',() => autoPlay());
-CAROUSEL.on('scroll',infiniteScroll);
+$(document).on('mouseup',dragStop);
 ARTICLE.on('mousedown',dragStart);
 ARTICLE.on('mousemove',dragging);
-$(document).on('mouseup',dragStop);
+
+//COMMENTS
+const WRAPPER3 = $('.wrapper3');
+const COMMENT = $('.comment');
+const FIRST_COMMENT_WIDTH = $('.comment .comment-card')[0].offsetWidth;
+const COMMENT_CHILDREN = [...COMMENT.children()];
+let comment_per_view = Math.round(COMMENT[0].offsetWidth/FIRST_COMMENT_WIDTH);
+$.each(COMMENT_CHILDREN.slice(-comment_per_view).reverse(), (k,v) => {
+    COMMENT.prepend($(v).prop('outerHTML'));
+});
+$.each(COMMENT_CHILDREN.slice(0, comment_per_view), (k,v) => {
+    COMMENT.append($(v).prop('outerHTML'));
+});
+
+const autoPlayComment = () => {
+    if(window.innerWidth < 768) return;
+    timeoutId = setTimeout(() => COMMENT[0].scrollLeft += FIRST_COMMENT_WIDTH, 2000);
+}
+const infiniteScrollComment = () => {
+    if(COMMENT.scrollLeft() === 0){
+        COMMENT.addClass('no-transition');
+        COMMENT.scrollLeft(COMMENT[0].scrollWidth - (2*COMMENT[0].offsetWidth));
+        COMMENT.removeClass('no-transition');
+    } else if (Math.ceil(COMMENT.scrollLeft()) === COMMENT[0].scrollWidth - COMMENT[0].offsetWidth){
+        COMMENT.addClass('no-transition');
+        COMMENT.scrollLeft(COMMENT[0].offsetWidth);
+        COMMENT.removeClass('no-transition');
+    }
+    clearTimeout(timeoutId);
+    if(!WRAPPER3[0].matches(':hover')) autoPlayComment();
+}
+autoPlayComment();
+WRAPPER3.on('mouseleave',() => autoPlayComment());
+COMMENT.on('scroll',infiniteScrollComment);
 
 //PARALLAX EFFECT
 const PEMANDANGAN = $('#pemandangan');
@@ -138,14 +175,12 @@ $(window).on('scroll', () => {
 
 //CARDS HIGHLIGHTS
 $('.card .no-highlight').on('mouseenter',(e)=>{
-    console.log($(e.target))
     $(e.target).removeClass('no-highlight');
     $(e.target).addClass('highlight');
     $(e.target).find('.no-highlight-text').addClass('highlight-text');
     $(e.target).find('.no-highlight-text').removeClass('no-highlight-text');
 });
 $('.card .no-highlight').on('mouseleave',(e)=>{
-    console.log('memek')
     $(e.target).removeClass('highlight');
     $(e.target).addClass('no-highlight');
     $(e.target).find('.highlight-text').addClass('no-highlight-text');
