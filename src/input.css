@@ -9,12 +9,18 @@
     }
 }
 
+
+
 /* :root{
     --very_small: 200;
 } */
 
 body {
     font-family: 'Montserrat', serif;
+}
+
+header,section {
+    max-width: 1440px;
 }
 
 .navbar-fixed{

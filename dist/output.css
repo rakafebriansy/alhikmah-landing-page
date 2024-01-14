@@ -1208,6 +1208,10 @@ video {
   font-weight: 700;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .font-extralight {
   font-weight: 200;
 }
@@ -1218,10 +1222,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-extrabold {
-  font-weight: 800;
 }
 
 .tracking-wider {
@@ -1296,6 +1296,10 @@ video {
 
 body {
   font-family: 'Montserrat', serif;
+}
+
+header,section {
+  max-width: 1440px;
 }
 
 .navbar-fixed {
@@ -1636,19 +1640,9 @@ body {
   background-color: rgb(241 253 237 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#888FA5\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(136 143 165 / var(--tw-bg-opacity));
-}
-
 .hover\:text-dark-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(52 77 47 / var(--tw-text-opacity));
-}
-
-.hover\:text-dark-secondary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(100 126 93 / var(--tw-text-opacity));
 }
 
 .focus\:border-indigo-300:focus {
@@ -2074,18 +2068,9 @@ body {
   background-color: rgb(4 120 87 / var(--tw-bg-opacity));
 }
 
-:is(:where(.dark) .dark\:bg-\[\#\]) {
-  background-color: #;
-}
-
 :is(:where(.dark) .dark\:text-dark-text) {
   --tw-text-opacity: 1;
   color: rgb(221 248 214 / var(--tw-text-opacity));
-}
-
-:is(:where(.dark) .dark\:text-white) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 :is(:where(.dark) .dark\:hover\:bg-\[\#F1FDED\]:hover) {
