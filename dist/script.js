@@ -13,23 +13,40 @@ window.onscroll = function(){
 const HTML = $('html');
 const DARK_TOGGLE = $('#dark-toggle');
 const RUMPUT = $('#rumput');
+const ICON_LAYANAN = $('.icon-layanan');
 DARK_TOGGLE.on('click',() => {
     if(DARK_TOGGLE[0].checked){
         HTML.addClass('dark');
         localStorage.theme = 'dark';
         RUMPUT.attr('src','dist/assets/img/rumput-darken.svg')
+        $(ICON_LAYANAN[0]).attr('src','dist/assets/img/ngaji1-light.png')
+        $(ICON_LAYANAN[1]).attr('src','dist/assets/img/ngaji2-light.png')
+        $(ICON_LAYANAN[2]).attr('src','dist/assets/img/zakat-light.png')
+        $(ICON_LAYANAN[3]).attr('src','dist/assets/img/tur-light.png')
     } else {
         HTML.removeClass('dark');
         localStorage.theme = 'light';
         RUMPUT.attr('src','dist/assets/img/rumput.svg')
+        $(ICON_LAYANAN[0]).attr('src','dist/assets/img/ngaji1.png')
+        $(ICON_LAYANAN[1]).attr('src','dist/assets/img/ngaji2.png')
+        $(ICON_LAYANAN[2]).attr('src','dist/assets/img/zakat.png')
+        $(ICON_LAYANAN[3]).attr('src','dist/assets/img/tur.png')
     }
 });
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     DARK_TOGGLE[0].checked=true;
     RUMPUT.attr('src','dist/assets/img/rumput-darken.svg')
+    $(ICON_LAYANAN[0]).attr('src','dist/assets/img/ngaji1-light.png')
+    $(ICON_LAYANAN[1]).attr('src','dist/assets/img/ngaji2-light.png')
+    $(ICON_LAYANAN[2]).attr('src','dist/assets/img/zakat-light.png')
+    $(ICON_LAYANAN[3]).attr('src','dist/assets/img/tur-light.png')
 } else {
     DARK_TOGGLE[0].checked=false;
     RUMPUT.attr('src','dist/assets/img/rumput.svg')
+    $(ICON_LAYANAN[0]).attr('src','dist/assets/img/ngaji1.png')
+    $(ICON_LAYANAN[1]).attr('src','dist/assets/img/ngaji2.png')
+    $(ICON_LAYANAN[2]).attr('src','dist/assets/img/zakat.png')
+    $(ICON_LAYANAN[3]).attr('src','dist/assets/img/tur.png')
 }
 
 
@@ -122,15 +139,6 @@ ARTICLE.on('mousemove',dragging);
 const WRAPPER3 = $('.wrapper3');
 const COMMENT = $('.comment');
 const FIRST_COMMENT_WIDTH = $('.comment .comment-card')[0].offsetWidth;
-const COMMENT_CHILDREN = [...COMMENT.children()];
-let comment_per_view = Math.round(COMMENT[0].offsetWidth/FIRST_COMMENT_WIDTH);
-$.each(COMMENT_CHILDREN.slice(-comment_per_view).reverse(), (k,v) => {
-    COMMENT.prepend($(v).prop('outerHTML'));
-});
-$.each(COMMENT_CHILDREN.slice(0, comment_per_view), (k,v) => {
-    COMMENT.append($(v).prop('outerHTML'));
-});
-
 const autoPlayComment = () => {
     if(window.innerWidth < 768) return;
     timeoutId = setTimeout(() => COMMENT[0].scrollLeft += FIRST_COMMENT_WIDTH, 2000);
@@ -149,8 +157,9 @@ const infiniteScrollComment = () => {
     if(!WRAPPER3[0].matches(':hover')) autoPlayComment();
 }
 autoPlayComment();
-WRAPPER3.on('mouseleave',() => autoPlayComment());
 COMMENT.on('scroll',infiniteScrollComment);
+$(WRAPPER3).on('mouseenter',() => autoPlayComment());
+$(WRAPPER3).on('mouseleave',() => autoPlayComment());
 
 //PARALLAX EFFECT
 const PEMANDANGAN = $('#pemandangan');

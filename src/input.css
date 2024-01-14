@@ -23,7 +23,7 @@ body {
 }
 
 .hamburger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-[#000000] dark:bg-[#344D2F];
+    @apply w-[30px] h-[2px] my-2 block bg-black dark:bg-black;
 }
 
 .hamburger-active > span:nth-child(1){
@@ -46,16 +46,6 @@ body {
     @apply bg-black;
 }
 
-
-/* @keyframes arrowFadeIn {
-    0% {@apply text-light-secondary bg-dark-secondary dark:text-dark-secondary dark:bg-light-secondary}
-    100% {@apply bg-light-secondary text-dark-secondary dark:bg-dark-secondary dark:text-light-secondary}
-}
-@keyframes arrowFadeOut {
-    0% {@apply text-dark-secondary bg-light-secondary dark:bg-dark-secondary dark:text-light-secondary}
-    100% {@apply bg-dark-secondary text-light-secondary dark:text-dark-secondary dark:bg-light-secondary}
-} */
-
 @keyframes highlightFadeIn {
     0% {@apply opacity-0}
     100% {@apply opacity-40}
@@ -73,13 +63,13 @@ body {
     100% {@apply bottom-1/2 -translate-y-1/2}
 }
 .arrow {
-    @apply bg-dark-secondary text-light-secondary dark:text-dark-secondary dark:bg-light-secondary
+    @apply bg-dark-secondary text-light-primary dark:text-dark-secondary dark:bg-light-primary
 }
 .arrow-fadein {
-    @apply bg-light-secondary text-dark-secondary dark:bg-dark-secondary dark:text-light-secondary animate-arrowFadeInLight dark:animate-arrowFadeInDark;
+    @apply bg-light-primary text-dark-secondary dark:bg-dark-secondary dark:text-light-primary animate-arrowFadeInLight dark:animate-arrowFadeInDark;
 }
 .arrow-fadeout {
-    @apply bg-dark-secondary text-light-secondary dark:bg-light-secondary dark:text-dark-secondary animate-arrowFadeOutLight dark:animate-arrowFadeOutDark;
+    @apply bg-dark-secondary text-light-primary dark:bg-light-primary dark:text-dark-secondary animate-arrowFadeOutLight dark:animate-arrowFadeOutDark;
     animation: arrowFadeOut 0.3s ease-in-out;
 }
 
