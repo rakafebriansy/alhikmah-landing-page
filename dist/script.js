@@ -1,3 +1,6 @@
+
+const darkToggle = document.querySelector('#dark-toggle');
+
 //NAVBAR SCROLL
 window.onscroll = function(){
     const HEADER = $('HEADER');
@@ -8,6 +11,23 @@ window.onscroll = function(){
         HEADER.removeClass('navbar-fixed');
     }
 };
+
+//DARK MODE BUTTON
+darkToggle.addEventListener('click',function(){
+    if (darkToggle.checked) {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+    } else {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+    }
+})
+
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    darkToggle.checked=true;
+} else {
+      darkToggle.checked=false;
+}
 
 //HAMBURGER MENU
 const HAMBURGER = $('#hamburger');
@@ -141,3 +161,4 @@ $(".arrow").on('mouseleave',(e)=>{
     $(e.target).removeClass('arrow-fadein');
     $(e.target).addClass('arrow-fadeout');
 });
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./dist/output.css">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -59,7 +67,7 @@
                                         </div>
                                     </label>
                                 </div>
-                            </li>
+                            </li>                          
                         </ul>
                     </nav>
                 </div>
@@ -82,16 +90,16 @@
             <img src="dist/assets/img/batu-rumput.svg" id="awan-4" class="z-[7] absolute top-0">
         </div>
     </section>
-    <section id="deskripsi" class="bg-dark-primary z-10 relative pt-10 pb-3 lg:py-10">
-        <h1 class="text-center text-dark-text font-bold text-2xl lg:text-5xl pb-6">Lihat Lebih Dekat</h1>
+    <section id="deskripsi" class="dark:bg-dark-primary bg-light-secondary z-10 relative pt-10 pb-3 lg:py-10">
+        <h1 class="text-center dark:text-dark-text text-light-text1 font-bold text-2xl lg:text-5xl pb-6">Lihat Lebih Dekat</h1>
         <div class="lg:flex">
             <div class="flex justify-center ">
                 <div class="w-[72%]">
                     <h1
-                        class="text-dark-text lg:text-start font-semibold text-xl sm:text-4xl text-center mt-5 sm:mt-10 md:mt-14">
+                        class="dark:text-dark-text text-light-text1 lg:text-start font-semibold text-xl sm:text-4xl text-center mt-5 sm:mt-10 md:mt-14">
                         Destinasi Wisata Masjid Al-Hikmah </h1>
                     <p
-                        class="text-center lg:text-start my-5 sm:my-10 text-dark-text text-sm sm:text-xl font-extralight">
+                        class="text-center lg:text-start my-5 sm:my-10 dark:text-dark-text text-light-text1 sm:text-xl font-extralight">
                         Masjid Al-Hikmah merupakan masjid fiktif yang kami buat. Meskipun berupa masjid fiktif, kami 
                         membuat gambaran dengan masjid yang memberikan ketenangan pada tiap perjalanan pengunjungnya sebagai bentuk mendekatkan diri pada Allah SWT. </p>
                 </div>
@@ -109,9 +117,9 @@
             </div>
         </div>
     </section>
-    <section id="layanan" class="bg-dark-secondary relative z-10 pb-10 pt-5 lg:py-10">
-        <h3 class="text-center text-dark-text">Menyediakan</h3>
-        <h1 class="text-center text-dark-text pt-3 pb-3 font-bold text-2xl">Layanan</h1>
+    <section id="layanan" class="bg-light-primary dark:bg-dark-secondary relative z-10 pb-10 pt-5 lg:py-10">
+        <h3 class="text-center dark:text-dark-text text-light-text2">Menyediakan</h3>
+        <h1 class="text-center dark:text-dark-text text-light-text2 pt-3 pb-3 font-bold text-2xl">Layanan</h1>
         <div class="flex justify-center">
             <div
                 class="w-[70%] grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 mt-5 gap-y-7 sm:gap-y-12 md:gap-y-16 lg:gap-y-28 xl:gap-y-32">
@@ -121,7 +129,7 @@
                     </div>
 
                     <p
-                        class="text-white block text-[0.6rem] text-sm sm:text-base md:text-sm lg:text-lg xl:text-xl text-center mt-2">
+                        class="text-light-text1 dark:text-dark-text block text-[0.6rem] text-sm sm:text-base md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Belajar Mengaji</p>
                 </div>
                 <div class="w-[85%] grid grid-flow-row">
@@ -129,7 +137,7 @@
                         <img src="dist/assets/img/ngaji2.png" alt="icon" class="w-[90%] h-[90%]">
                     </div>
                     <p
-                        class="text-white block text-[0.6rem] text-sm sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
+                        class="text-light-text1 dark:text-dark-text block text-[0.6rem] text-sm sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Bedah Hadits</p>
                 </div>
                 <div class="w-[85%] grid grid-flow-row">
@@ -137,7 +145,7 @@
                         <img src="dist/assets/img/zakat.png" alt="icon" class="w-[90%] h-[90%]">
                     </div>
                     <p
-                        class="text-white block text-[0.6rem] text-sm sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
+                        class="text-light-text1 dark:text-dark-text block text-[0.6rem] text-sm sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Pembayaran Zakat</p>
                 </div>
                 <div class="w-[85%] grid grid-flow-row">
@@ -145,15 +153,15 @@
                         <img src="dist/assets/img/tur.png" alt="icon" class="w-[90%] h-[90%]">
                     </div>
                     <p
-                        class="text-white block text-[0.6rem] text-sm sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
+                        class="text-light-text1 dark:text-dark-text block text-[0.6rem] text-sm sm:text-sm md:text-sm lg:text-lg xl:text-xl text-center mt-2">
                         Tur Online</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="galeri" class="bg-dark-primary relative z-10 pb-10 pt-5 lg:py-10">
-        <h3 class="text-center text-dark-text pt-5">Sisi Masjid</h3>
-        <h1 class="text-center text-dark-text font-bold text-2xl pt-3 pb-3">Galeri</h1>
+    <section id="galeri" class=" bg-light-secondary dark:bg-dark-primary relative z-10 pb-10 pt-5 lg:py-10">
+        <h3 class="text-center text-light-text2 dark:text-dark-text pt-5">Sisi Masjid</h3>
+        <h1 class="text-center text-light-text2 dark:text-dark-text font-bold text-2xl pt-3 pb-3">Galeri</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10 px-1 sm:px-2 lg:px-3">
             <div class="wrapper">
                 <i id="galeri-kiri"
@@ -161,12 +169,60 @@
                 <ul class="carousel">
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/photo1.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <img src="dist/assets/img/tempat-beribadah.jpg" alt="" class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
                                 <div class="w-full bg-black h-full rounded-xl no-highlight relative">
                                     <p
                                         class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
-                                        Tempat muadzin</p>
+                                        Tempat Sholat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="px-2 rounded-xl relative ">
+                            <img src="dist/assets/img/baca.jpg" alt="" class="w-full object-cover rounded-xl ">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0 ">
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
+                                        Ruang Baca Al-Qur'an</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/pengunjung.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white text-center no-highlight-text absolute left-1/2 transform -translate-x-1/2">
+                                        Pengunjung Masjid Al-Hikmah</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/makam.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2 text-center">
+                                        Makam Sunan Kalijaga (Misal)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/lorong.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2 text-center">
+                                        Lorong Masjid</p>
                                 </div>
                             </div>
                         </div>
@@ -177,32 +233,32 @@
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
                                 <div class="w-full bg-black h-full rounded-xl no-highlight">
                                     <p
-                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
-                                        Langit-langit</p>
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2 text-center">
+                                        Langit-Langit Masjid</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="card">
                         <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/dalam.jpg" alt="" class="w-full object-cover rounded-xl">
-                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
-                                <div class="w-full bg-black h-full rounded-xl no-highlight">
-                                    <p
-                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2">
-                                        Sisi dalam</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="px-2 rounded-xl relative">
-                            <img src="dist/assets/img/photo4.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <img src="dist/assets/img/halaman.jpg" alt="" class="w-full object-cover rounded-xl">
                             <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
                                 <div class="w-full bg-black h-full rounded-xl no-highlight">
                                     <p
                                         class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2 text-center">
-                                        Sisi samping kiri</p>
+                                        Halaman Masjid</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="px-2 rounded-xl relative">
+                            <img src="dist/assets/img/air.jpg" alt="" class="w-full object-cover rounded-xl">
+                            <div class="w-full rounded-xl absolute px-2 h-full top-0 left-0">
+                                <div class="w-full bg-black h-full rounded-xl no-highlight">
+                                    <p
+                                        class="text-white no-highlight-text absolute left-1/2 transform -translate-x-1/2 text-center">
+                                        Air Mancur Masjid</p>
                                 </div>
                             </div>
                         </div>
@@ -218,22 +274,22 @@
         <!-- INI RAKA PUNYA -->
     </section>
 
-    <section id="artikel" class="bg-dark-primary pt-10 pb-2 lg:py-10">
-        <h3 class="text-center text-dark-text pt-5">Hadir Terbaru</h3>
-        <h1 class="text-center text-dark-text pt-3 pb-3 font-bold text-2xl">Artikel</h1>
+    <section id="artikel" class=" bg-light-primary dark:bg-dark-primary pt-10 pb-2 lg:py-10">
+        <h3 class="text-center text-light-text2 dark:text-dark-text pt-5">Hadir Terbaru</h3>
+        <h1 class="text-center text-light-text2 dark:text-dark-text pt-3 pb-3 font-bold text-2xl">Artikel</h1>
         <div class="flex relative justify-center items-center py-4 sm:py-6 lg:py-10 xl:py-10">
             <div class="wrapper2 w-[80%]">
                 <i id="artikel-kiri"
-                    class="bi bi-chevron-left text-black text-2xl text-center bg-white absolute left-4 z-10 rounded-full w-8 h-8 arrow"></i>
+                    class="bi bi-chevron-left text-white text-2xl text-center bg-dark-secondary absolute left-4 z-10 rounded-full w-8 h-8 arrow dark:bg-dark-text dark:text-dark-text"></i>
                 <ul class="article">
                     <li class="article-card">
                         <div class="px-2 rounded-xl relative shadow-lg" draggable="false">
-                            <img src="dist/assets/img/langit.jpg" alt="Image" draggable="false"
+                            <img src="dist/assets/img/artikel.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-dark-text">Kunjungan Gubernur Jawa Timur di Masjid Al-Hikmah</div>
-                                <p class="text-xs text-dark-text">Kunjungan oleh Gubernur Jawa Timur pada hari kamis tanggal 10 maret 2024 bertujuan..</p>
-                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Kunjungan Gubernur Jawa Timur di Masjid Al-Hikmah</div>
+                                <p class="text-xs text-light-text2 dark:text-dark-text">Kunjungan oleh Gubernur Jawa Timur pada hari kamis tanggal 10 maret 2024 bertujuan..</p>
+                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
                                         shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
@@ -243,12 +299,12 @@
                     </li>
                     <li class="article-card">
                         <div class="px-2 rounded-xl relative shadow-lg" draggable="false">
-                            <img src="dist\assets\img\artikel-2.jpg" alt="Image" draggable="false"
+                            <img src="dist\assets\img\palestina.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-dark-text">Infografis : 4 Alasan Islam Memuliakan Palestina</div>
-                                <p class="text-xs text-dark-text">Berikut beberapa rangkuman alasan islam memuliakan tanah palestina: Pertama, tanah.. </p>
-                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Infografis : 4 Alasan Islam Memuliakan Palestina</div>
+                                <p class="text-xs text-light-text2 dark:text-dark-text">Berikut beberapa rangkuman alasan islam memuliakan tanah palestina: Pertama, tanah.. </p>
+                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
                                         shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
@@ -260,10 +316,10 @@
                         <div class="px-2 relative shadow-lg" draggable="false">
                             <img src="dist\assets\img\iri-hati.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-dark-text">Iri Hati Melanda? Dinginkan dengan Amalan Berikut!</div>
-                                <p class="text-xs text-dark-text">Iri hati bukanlah hal yang baik. Oleh karena itu, menjaga hati dari iri hati penting dilaku..</p>
-                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Iri Hati Melanda? Dinginkan dengan Amalan Berikut!</div>
+                                <p class="text-xs text-light-text2 dark:text-dark-text">Iri hati bukanlah hal yang baik. Oleh karena itu, menjaga hati dari iri hati penting dilaku..</p>
+                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
                                         shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
@@ -275,10 +331,10 @@
                         <div class="px-2 relative shadow-lg" draggable="false">
                             <img src="dist\assets\img\artikel-4.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-dark-text">Menjadi Manusia yang Menjaga Hablum Minannas</div>
-                                <p class="text-xs text-dark-text">Sebagai seorang hamba yang taat, menjaga hubungan dengan sesama umat atau manu..</p>
-                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Menjadi Manusia yang Menjaga Hablum Minannas</div>
+                                <p class="text-xs text-light-text2 dark:text-dark-text">Sebagai seorang hamba yang taat, menjaga hubungan dengan sesama umat atau manu..</p>
+                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
                                         shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
@@ -290,10 +346,10 @@
                         <div class="px-2 relative shadow-lg" draggable="false">
                             <img src="dist\assets\img\artikel-5.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-dark-text">Terus Merasa Kurang? Bersyukur Solusinya!</div>
-                                <p class="text-xs text-dark-text">Ada kalanya seorang manusia meski telah mendapatkan banyak hal masih terasa kura.. </p>
-                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Terus Merasa Kurang? Bersyukur Solusinya!</div>
+                                <p class="text-xs text-light-text2 dark:text-dark-text">Ada kalanya seorang manusia meski telah mendapatkan banyak hal masih terasa kura.. </p>
+                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
                                         shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
@@ -305,10 +361,10 @@
                         <div class="px-2 relative shadow-lg" draggable="false">
                             <img src="dist\assets\img\artikel-6.jpg" alt="Image" draggable="false"
                                 class="w-full rounded-t-xl rounded-tr-xl" />
-                            <div class="px-6 py-4 bg-dark-secondary rounded-b-xl rounded-bl-xl">
-                                <div class=" font-semibold text-base mb-2 text-dark-text">Hukum Membayar Zakat bagi Umat Muslim</div>
-                                <p class="text-xs text-dark-text">Pada saat-saat tertentu, kita diwajibkan untuk mengeluarkan sedikit dari harta kita untuk..</p>
-                                <div class='mt-4 sm:mt-6 bg-dark-secondary'>
+                            <div class="px-6 py-4 bg-light-secondary dark:bg-dark-secondary rounded-b-xl rounded-bl-xl">
+                                <div class=" font-semibold text-base mb-2 text-light-text2 dark:text-dark-text">Hukum Membayar Zakat bagi Umat Muslim</div>
+                                <p class="text-xs text-light-text2 dark:text-dark-text">Pada saat-saat tertentu, kita diwajibkan untuk mengeluarkan sedikit dari harta kita untuk..</p>
+                                <div class='mt-4 sm:mt-6 bg-light-secondary dark:bg-dark-secondary'>
                                     <a href="#"
                                         class="inline-block px-3 py-3 bg-dark-primary text-dark-text rounded-full 
                                         shadow-lg font-semibold tracking-wider text-xs hover:bg-dark-text hover:text-dark-secondary">Selengkapnya</a>
@@ -318,17 +374,17 @@
                     </li>
                 </ul>
                 <i id="artikel-kanan"
-                    class="bi bi-chevron-right text-black text-2xl text-center bg-white absolute right-4 z-10 rounded-full w-8 h-8 arrow"></i>
+                    class="bi bi-chevron-right text-white text-2xl text-center bg-dark-secondary absolute right-4 z-10 rounded-full w-8 h-8 arrow"></i>
             </div>
         </div>
     </section>
 
-    <section id="subscribe" class="p-6 lg:p-3 bg-dark-secondary">
+    <section id="subscribe" class="p-6 lg:p-3 bg-light-secondary dark:bg-dark-secondary">
         <div class="mx-2 md:p-3 lg:grid lg:grid-cols-2">
             <div class="flex items-center justify-center w-full mb-5 md:mb-0">
                 <div class="w-[70%]">
-                    <h3 class="mb-2 text-2xl font-bold text-dark-text text-center lg:text-left ">Bergabung dengan Kami</h3>
-                    <p class=" text-sm text-center text-dark-text lg:text-left lg:text-base ">
+                    <h3 class="mb-2 text-2xl text-light-text1 dark:text-dark-text font-bold  text-center lg:text-left ">Bergabung dengan Kami</h3>
+                    <p class=" text-sm text-center text-light-text1 dark:text-dark-text lg:text-left lg:text-base ">
                         Bergabung dan dapatkan notifikasi tentang informasi, layanan dan artikel terbaru
                     </p>
                 </div>
@@ -336,7 +392,7 @@
             <div class="w-full">
                 <form novalidate=""><input type="hidden" name="tags" value="earlyaccess">
                     <div class="flex flex-col lg:w-[85%]">
-                        <p class="hidden lg:block mb-2 text-xl font-medium text-dark-text text-center">Isi form dibawah untuk bergabung</p>
+                        <p class="hidden lg:block mb-2 text-xl font-medium text-light-text1 dark:text-dark-text text-center">Isi form dibawah untuk bergabung</p>
                         <input type="email" id="email" name="email" placeholder="Ketik nama lengkap"
                             class="flex-1 px-3 py-2 my-3 text-base placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 ">
                         <input type="email" id="email" name="email" placeholder="Ketik alamat email"
@@ -352,11 +408,11 @@
     </section>
 
 
-    <section id="footer" class="bg-slate-100 pt-5">
+    <section id="footer" class="bg-slate-100 dark:bg-zinc-900 pt-5">
         <div class="">
             <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
                 <div class="p-5">
-                    <h3 class="text-center mb-3 font-semibold text-lg lg:text-xl text-dark-primary">Masjid Al-Hikmah</h3>
+                    <h3 class="text-center mb-3 font-semibold text-lg lg:text-xl text-dark-primary dark:text-dark-text">Masjid Al-Hikmah</h3>
                     <div class="rounded-lg overflow-hidden w-full h-[70%]">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.153889238801!2d112.71260567411318!3d-7.336608772161256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fba9cfb6dfab%3A0x6fe7210ef241206!2sMasjid%20Nasional%20Al-Akbar%20Surabaya!5e0!3m2!1sid!2sid!4v1704808476971!5m2!1sid!2sid"
@@ -364,25 +420,25 @@
                     </div>
                 </div>
                 <div class="p-5">
-                    <div class="text-base text-dark-primary font-bold">Layanan</div>
-                    <a class="my-3 block text-sm" href="/#">Belajar Mengaji<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">Bedah Hadist<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">Pembayaran Zakat<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">Tur Online<span class="text-dark-primary text-xs p-1"></span></a>
+                    <div class="text-base text-dark-primary dark:text-light-primary font-bold">Layanan</div>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Belajar Mengaji<span class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Bedah Hadist<span class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Pembayaran Zakat<span class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Tur Online<span class="text-xs p-1"></span></a>
                 </div>
                 <div class="p-5">
-                    <div class="text-base text-dark-primary font-bold">Kerja Sama</div>
-                    <a class="my-3 block text-sm" href="/#">Kementerian Agama<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">Pemerintah Jawa Timur<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">Pemerintah Daerah Jember<span class="text-dark-primary text-xs p-1"></span></a>
+                    <div class="text-base text-dark-primary dark:text-light-primary font-bold">Kerja Sama</div>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Kementerian Agama<span class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Pemerintah Jawa Timur<span class=" text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Pemerintah Daerah Jember<span class=" text-xs p-1"></span></a>
                 </div>
                 <div class="p-5">
-                    <div class="text-base text-dark-primary font-bold">Kontak</div>
-                    <a class="my-3 block text-sm" href="/#">0812-8238-9829<span class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">Jl.Melati No.23, Sumbersari, Jember, Jawa Timur<span
-                            class="text-dark-primary text-xs p-1"></span></a>
-                    <a class="my-3 block text-sm" href="/#">masjidhikmah@gmail.com <span
-                            class="text-dark-primary text-xs p-1"></span></a>
+                    <div class="text-base text-dark-primary dark:text-light-primary font-bold">Kontak</div>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">0812-8238-9829<span class="text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">Jl.Melati No.23, Sumbersari, Jember, Jawa Timur<span
+                            class=" text-xs p-1"></span></a>
+                    <a class="my-3 block text-sm text-dark-primary dark:text-dark-text" href="/#">masjidhikmah@gmail.com <span
+                            class="text-xs p-1"></span></a>
                 </div>
             </div>
         </div>
