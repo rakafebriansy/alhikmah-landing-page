@@ -810,6 +810,14 @@ video {
   height: 100%;
 }
 
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[80\%\] {
+  height: 80%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
