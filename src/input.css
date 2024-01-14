@@ -69,14 +69,13 @@ header,section {
     100% {@apply bottom-1/2 -translate-y-1/2}
 }
 .arrow {
-    @apply bg-dark-secondary text-light-primary dark:text-dark-secondary dark:bg-light-primary
+    @apply dark:bg-dark-secondary dark:text-light-primary text-dark-secondary bg-light-primary
 }
 .arrow-fadein {
-    @apply bg-light-primary text-dark-secondary dark:bg-dark-secondary dark:text-light-primary animate-arrowFadeInLight dark:animate-arrowFadeInDark;
+    @apply bg-dark-secondary text-light-primary dark:bg-light-primary dark:text-dark-secondary animate-arrowFadeOutLight dark:animate-arrowFadeInDark;
 }
 .arrow-fadeout {
-    @apply bg-dark-secondary text-light-primary dark:bg-light-primary dark:text-dark-secondary animate-arrowFadeOutLight dark:animate-arrowFadeOutDark;
-    animation: arrowFadeOut 0.3s ease-in-out;
+    @apply bg-light-primary text-dark-secondary dark:bg-dark-secondary dark:text-light-primary animate-arrowFadeInLight dark:animate-arrowFadeOutDark;
 }
 
 .carousel :where(.card, .image) {

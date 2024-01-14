@@ -28,10 +28,10 @@ module.exports = {
         },
       },
       animation:{
-        'arrowFadeInLight': 'darkToLight 0.3s ease-in-out',
-        'arrowFadeOutLight': 'lightToDark 0.3s ease-in-out',
-        'arrowFadeInDark': 'lightToDark 0.3s ease-in-out',
-        'arrowFadeOutDark': 'darkToLight 0.3s ease-in-out',
+        'arrowFadeInLight': 'lightToDark 0.3s ease-in-out',
+        'arrowFadeOutLight': 'darkToLight 0.3s ease-in-out',
+        'arrowFadeInDark': 'darkToLight 0.3s ease-in-out',
+        'arrowFadeOutDark': 'lightToDark 0.3s ease-in-out',
       }
     },
   },

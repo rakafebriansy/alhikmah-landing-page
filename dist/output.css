@@ -996,16 +996,6 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.bg-\[\#344D2F\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(52 77 47 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#87A281\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(135 162 129 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#A9CEC2\] {
   --tw-bg-opacity: 1;
   background-color: rgb(169 206 194 / var(--tw-bg-opacity));
@@ -1406,16 +1396,16 @@ header,section {
 
 .arrow {
   --tw-bg-opacity: 1;
-  background-color: rgb(100 126 93 / var(--tw-bg-opacity));
+  background-color: rgb(242 252 239 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(242 252 239 / var(--tw-text-opacity));
+  color: rgb(100 126 93 / var(--tw-text-opacity));
 }
 
 :is(:where(.dark) .arrow) {
   --tw-bg-opacity: 1;
-  background-color: rgb(242 252 239 / var(--tw-bg-opacity));
+  background-color: rgb(100 126 93 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(100 126 93 / var(--tw-text-opacity));
+  color: rgb(242 252 239 / var(--tw-text-opacity));
 }
 
 @keyframes darkToLight {
@@ -1433,46 +1423,6 @@ header,section {
 .arrow-fadein {
   animation: darkToLight 0.3s ease-in-out;
   --tw-bg-opacity: 1;
-  background-color: rgb(242 252 239 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(100 126 93 / var(--tw-text-opacity));
-}
-
-@keyframes lightToDark {
-  0% {
-    background-color: #F2FCEF;
-    color: #647E5D;
-  }
-
-  100% {
-    color: #F2FCEF;
-    background-color: #647E5D;
-  }
-}
-
-:is(:where(.dark) .arrow-fadein) {
-  animation: lightToDark 0.3s ease-in-out;
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 126 93 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(242 252 239 / var(--tw-text-opacity));
-}
-
-@keyframes lightToDark {
-  0% {
-    background-color: #F2FCEF;
-    color: #647E5D;
-  }
-
-  100% {
-    color: #F2FCEF;
-    background-color: #647E5D;
-  }
-}
-
-.arrow-fadeout {
-  animation: lightToDark 0.3s ease-in-out;
-  --tw-bg-opacity: 1;
   background-color: rgb(100 126 93 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(242 252 239 / var(--tw-text-opacity));
@@ -1490,7 +1440,7 @@ header,section {
   }
 }
 
-:is(:where(.dark) .arrow-fadeout) {
+:is(:where(.dark) .arrow-fadein) {
   animation: darkToLight 0.3s ease-in-out;
   --tw-bg-opacity: 1;
   background-color: rgb(242 252 239 / var(--tw-bg-opacity));
@@ -1498,8 +1448,44 @@ header,section {
   color: rgb(100 126 93 / var(--tw-text-opacity));
 }
 
+@keyframes lightToDark {
+  0% {
+    background-color: #F2FCEF;
+    color: #647E5D;
+  }
+
+  100% {
+    color: #F2FCEF;
+    background-color: #647E5D;
+  }
+}
+
 .arrow-fadeout {
-  animation: arrowFadeOut 0.3s ease-in-out;
+  animation: lightToDark 0.3s ease-in-out;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 252 239 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(100 126 93 / var(--tw-text-opacity));
+}
+
+@keyframes lightToDark {
+  0% {
+    background-color: #F2FCEF;
+    color: #647E5D;
+  }
+
+  100% {
+    color: #F2FCEF;
+    background-color: #647E5D;
+  }
+}
+
+:is(:where(.dark) .arrow-fadeout) {
+  animation: lightToDark 0.3s ease-in-out;
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 126 93 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(242 252 239 / var(--tw-text-opacity));
 }
 
 .carousel :where(.card, .image) {
@@ -1630,19 +1616,14 @@ header,section {
   list-style-type: none;
 }
 
-.hover\:bg-\[\#EBFDF7\]:hover {
+.hover\:bg-light-text1:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(235 253 247 / var(--tw-bg-opacity));
+  background-color: rgb(52 77 47 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#F1FDED\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 253 237 / var(--tw-bg-opacity));
-}
-
-.hover\:text-dark-primary:hover {
+.hover\:text-\[\#A9CEC2\]:hover {
   --tw-text-opacity: 1;
-  color: rgb(52 77 47 / var(--tw-text-opacity));
+  color: rgb(169 206 194 / var(--tw-text-opacity));
 }
 
 .focus\:border-indigo-300:focus {
